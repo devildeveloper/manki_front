@@ -116,12 +116,12 @@ html {
   margin-top: 10px;
   margin-bottom: 10px;
   border-bottom: 1px dotted #4a4a4a;
+  padding: 10px;
 }
 .main [name="experience-type"] .item a {
   color: #4a4a4a;
 }
 .main [name="experience-type"] .item.active {
-  padding: 10px;
   border-radius: 8px;
   background-color: #ff5628;
 }

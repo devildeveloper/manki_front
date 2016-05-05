@@ -59,18 +59,18 @@
 								<div class="tabs-menu">
 									<ul>
 										<li>
-											<a href="#" class="active">EXPLORAR</a>
+											<a href="#" data-content="c1" class="active">EXPLORAR</a>
 										</li>
 										<li class="text-center">
-											<a href="#">ENSEÑAR</a>
+											<a href="#" data-content="c2" >ENSEÑAR</a>
 										</li>
 										<li class="text-right">
-											<a href="#">ENTRETENER</a>
+											<a href="#" data-content="c3" >ENTRETENER</a>
 										</li>
 									</ul>
 								</div>
 								<div class="tabs-content-element">
-									<div class="content show">
+									<div class="content show" data-target="c1">
 										<div class="row">
 											<div class="small-8 column">
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae doloremque facere impedit possimus corporis aliquid at alias perferendis tempore ad hic ipsa qui reiciendis modi natus dignissimos id, quis sunt.</p>
@@ -83,10 +83,10 @@
 											</div>											
 										</div>
 									</div>
-									<div class="content">
+									<div class="content" data-target="c2">
 										<div class="row">
 											<div class="small-8 column">
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae doloremque facere impedit possimus corporis aliquid at alias perferendis tempore ad hic ipsa qui reiciendis modi natus dignissimos id, quis sunt.</p>
+												<p>cats Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae doloremque facere impedit possimus corporis aliquid at alias perferendis tempore ad hic ipsa qui reiciendis modi natus dignissimos id, quis sunt.</p>
 											</div>
 											<div class="small-4 column">
 												<img src="img/carrito.png" alt="">
@@ -96,10 +96,10 @@
 											</div>											
 										</div>
 									</div>
-									<div class="content">
+									<div class="content" data-target="c3">
 										<div class="row">
 											<div class="small-8 column">
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae doloremque facere impedit possimus corporis aliquid at alias perferendis tempore ad hic ipsa qui reiciendis modi natus dignissimos id, quis sunt.</p>
+												<p>dogs Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae doloremque facere impedit possimus corporis aliquid at alias perferendis tempore ad hic ipsa qui reiciendis modi natus dignissimos id, quis sunt.</p>
 											</div>
 											<div class="small-4 column">
 												<img src="img/carrito.png" alt="">
@@ -322,12 +322,32 @@
 				})
 			}
 		});	
-		var experiencesType =document.querySelectorAll('.item>a');
+		var experiencesType =document.querySelectorAll('.item');
 		[].forEach.call(experiencesType,function(item){
 			item.addEventListener('click',function(){
 				user.setExperience(this.textContent);
+				var i =document.querySelectorAll('.item');
+				[].forEach.call(i,function(item){
+					item.setAttribute('class','small-12 medium-4 column item')
+				});
+				this.setAttribute('class','small-12 medium-4 column item active')
 			})
 		})	
+		
+		var li =document.querySelectorAll('.tabs-menu li a');
+		[].forEach.call(li,function(item){
+			item.addEventListener('click',function(){
+				var i =document.querySelectorAll('.tabs-menu li a');
+				[].forEach.call(i,function(item){
+					item.setAttribute('class','')
+				});
+				document.querySelector('.content.show').setAttribute('class','content')
+				var target = this.getAttribute('data-content');
+				document.querySelector('[data-target="'+target+'"]').setAttribute('class','content show')
+				this.setAttribute('class','active');
+			})
+		})		
+		
 		function setCity(){
 			user.setCity(document.querySelector('select[name="ciudad"]').options.selectedIndex);
 		}
