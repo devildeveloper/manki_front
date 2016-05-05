@@ -357,13 +357,18 @@
 		function setMotive(){
 			user.setMotive(document.querySelector('select[name="motive"]').options.selectedIndex);
 		}
-		function setContact(){
-			var name = document.querySelector('input[name="name"]').value.trim();
-			var phone = document.querySelector('input[name="phone"]').value.trim()
-			var email = document.querySelector('input[name="mail"]').value.trim()
+		function setContact(name,phone,email){
 			user.setContact(name,phone,email);
 		}
 		function prepareForm(e){
+			if(!name || !phone || !email){
+				alert('ingrese nombre,teléfono y correo');	
+			}else{
+				var name = document.querySelector('input[name="name"]').value.trim();
+				var phone = document.querySelector('input[name="phone"]').value.trim()
+				var email = document.querySelector('input[name="mail"]').value.trim()
+				setContanct(name,phone,email);
+			}
 			e.preventDefault();
 			setCity();
 			setAbout();
