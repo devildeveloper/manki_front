@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div class="main">
+	<form method="POST" action="#" class="main">
 		<header>
 			<div class="row">
 				<div class="small-10 small-offset-1 column text-center">
@@ -59,13 +59,13 @@
 								<div class="tabs-menu">
 									<ul>
 										<li>
-											<a href="" class="active">EXPLORAR</a>
+											<a href="#" class="active">EXPLORAR</a>
 										</li>
 										<li class="text-center">
-											<a href="">ENSEÑAR</a>
+											<a href="#">ENSEÑAR</a>
 										</li>
 										<li class="text-right">
-											<a href="">ENTRETENER</a>
+											<a href="#">ENTRETENER</a>
 										</li>
 									</ul>
 								</div>
@@ -79,7 +79,7 @@
 												<img src="img/carrito.png" alt="">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success" type="button">CONTINUAR</button>
+												<button class="button success" type="button" onclick="user.setActivity('explorar')">CONTINUAR</button>
 											</div>											
 										</div>
 									</div>
@@ -92,7 +92,7 @@
 												<img src="img/carrito.png" alt="">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success" type="button">CONTINUAR</button>
+												<button class="button success" type="button" onclick="user.setActivity('enseñar')">CONTINUAR</button>
 											</div>											
 										</div>
 									</div>
@@ -105,7 +105,7 @@
 												<img src="img/carrito.png" alt="">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success" type="button">CONTINUAR</button>
+												<button class="button success" type="button" onclick="user.setActivity('entretener')">CONTINUAR</button>
 											</div>
 										</div>
 									</div>												
@@ -234,7 +234,7 @@
 					</ul>
 				</div>
 				<div class="small-12 text-center">
-					<button class="button success" type="button">ENVIAR</button>
+					<button class="button success" type="submit">ENVIAR</button>
 				</div>
 			</div>
 		</section>
@@ -252,7 +252,124 @@
 				</div>
 			</div>
 		</footer>
-	</div>
+	</form>
 	<script src="js/picture.min.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-latest.js"></script>
+	<script>
+		Parse.initialize('myAppId')
+		Parse.serverURL='http://54.175.72.64:1337/parse';
+		function save(){
+			var obj = new Parse.Object('GameScore');
+			obj.set('score',1332);
+			obj.save().then(function(obj) {
+				console.log(obj.toJSON());
+				var query = new Parse.Query('GameScore');
+				query.get(obj.id).then(function(objAgain) {
+					console.log(objAgain.toJSON());
+				}, function(err) {console.log(err); });
+			}, function(err) { console.log(err); });
+		}
+	</script>
+	<script>
+		function MankiUser(){
+			var activity; // explorar,enseñar,entretener
+			var experience;// tour por el barrio,día de excursion, tour de comidas y bebidas,tour de arte y diseño,bike tour,caminata,otro
+			var city ; // Lima
+			var aboutExperience;
+			var motive; // conocer gente/hacer amigos
+			var contact
+			return {
+				setActivity:function(str){
+					this.activity = str
+				}
+				,setExperience:function(str){
+					this.experience = str
+				}
+				,setCity:function(str){
+					this.city=str;
+				}
+				,setAbout:function(str){
+					this.aboutExperience = str;
+				}
+				,setMotive:function(str){
+					this.motive=str;
+				}
+				,setContact:function(n,p,m){
+					this.contact={
+						name  : n
+						,phone : p
+						,mail  : m
+					}
+				}				
+				,getAll:function(){
+					return{
+						activity:this.activity
+						,experience:this.experience
+						,city:this.city
+						,about:this.aboutExperience
+						,motive:this.motive
+						,contact:this.contact
+					}
+				}
+			}
+		}
+		var user = new MankiUser();
+		addEventListener("load",function(){
+			var links= document.getElementsByTagName("a");
+			for (var i=0;i<links.length;i++){
+				links[i].addEventListener("click",function(e){
+					e.preventDefault();
+				})
+			}
+		});	
+		var experiencesType =document.querySelectorAll('.item>a');
+		[].forEach.call(experiencesType,function(item){
+			item.addEventListener('click',function(){
+				user.setExperience(this.textContent);
+			})
+		})	
+		function setCity(){
+			user.setCity(document.querySelector('select[name="ciudad"]').options.selectedIndex);
+		}
+		function setAbout(){
+			user.setAbout(document.querySelector('textarea').value.trim());
+		}
+		function setMotive(){
+			user.setMotive(document.querySelector('select[name="motive"]').options.selectedIndex);
+		}
+		function setContact(){
+			var name = document.querySelector('input[name="name"]').value.trim();
+			var phone = document.querySelector('input[name="phone"]').value.trim()
+			var email = document.querySelector('input[name="mail"]').value.trim()
+			user.setContact(name,phone,email);
+		}
+		function prepareForm(e){
+			e.preventDefault();
+			setCity();
+			setAbout();
+			setMotive();
+			setContact();
+			saveUser();
+		}	
+		function saveUser(){
+			var MankiUser = Parse.Object.extend("MankiUser");
+			var token = new MankiUser();
+
+			token.save(user.getAll(), {
+			success: function(u) {
+				// Execute any logic that should take place after the object is saved.
+				//alert('New object created with objectId: ' + gameScore.id);
+				console.log(u)
+				alert('Gracias por registrarte');
+			},
+			error: function(gameScore, error) {
+				// Execute any logic that should take place if the save fails.
+				// error is a Parse.Error with an error code and message.
+				console.log(error.message);
+			}
+			});			
+		}
+		document.querySelector('form').addEventListener('submit',prepareForm);	
+	</script>
 </body>
 </html>
