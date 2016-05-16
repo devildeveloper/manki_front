@@ -110,6 +110,7 @@ html {
   margin-top: 40px;
 }
 .main [name="experience-type"] {
+  display: none;
   margin-top: 80px;
 }
 .main [name="experience-type"] .item {
@@ -132,6 +133,7 @@ html {
   margin-top: 0;
 }
 .main [name="instructor-about"] {
+  display: none;
   padding-top: 80px;
 }
 .main [name="instructor-about"] h1 {
@@ -149,6 +151,7 @@ html {
   margin-bottom: 15px;
 }
 .main [name="activity"] {
+  display: none;
   padding-top: 100px;
 }
 .main [name="activity"] h1 {

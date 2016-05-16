@@ -79,7 +79,7 @@
 												<img src="img/carrito.png" alt="">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success" type="button" onclick="user.setActivity('explorar')">CONTINUAR</button>
+												<button class="button success" type="button" onclick="window.user.activity='explorar'">CONTINUAR</button>
 											</div>											
 										</div>
 									</div>
@@ -92,7 +92,7 @@
 												<img src="img/carrito.png" alt="">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success" type="button" onclick="user.setActivity('enseñar')">CONTINUAR</button>
+												<button class="button success" type="button" onclick="window.user.activity='enseñar'">CONTINUAR</button>
 											</div>											
 										</div>
 									</div>
@@ -105,7 +105,7 @@
 												<img src="img/carrito.png" alt="">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success" type="button" onclick="user.setActivity('entretener')">CONTINUAR</button>
+												<button class="button success" type="button" onclick="window.user.activity='entretener'">CONTINUAR</button>
 											</div>
 										</div>
 									</div>												
@@ -187,8 +187,7 @@
 					</p>
 				</div>
 				<div class="small-12 medium-6 column">
-					<textarea name="desc" placeholder="Ej: Haré un tour por mi barrio, mostrando los lugares que cuentan historias de mi ciudad. Además, invitaré un plato típico.">
-					</textarea>
+					<textarea name="desc" rows="5" placeholder="Ej: Haré un tour por mi barrio, mostrando los lugares que cuentan historias de mi ciudad. Además, invitaré un plato típico."></textarea>
 				</div>
 			</div>
 			<div class="row">
@@ -255,146 +254,71 @@
 	</form>
 	<script src="js/picture.min.js"></script>
 	<script src="http://www.parsecdn.com/js/parse-latest.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
 	<script>
 		Parse.initialize('myAppId')
 		Parse.serverURL='http://54.175.72.64:1337/parse';
-		function save(){
-			var obj = new Parse.Object('GameScore');
-			obj.set('score',1332);
-			obj.save().then(function(obj) {
-				console.log(obj.toJSON());
-				var query = new Parse.Query('GameScore');
-				query.get(obj.id).then(function(objAgain) {
-					console.log(objAgain.toJSON());
-				}, function(err) {console.log(err); });
-			}, function(err) { console.log(err); });
-		}
 	</script>
 	<script>
-		function MankiUser(){
-			var activity; // explorar,enseñar,entretener
-			var experience;// tour por el barrio,día de excursion, tour de comidas y bebidas,tour de arte y diseño,bike tour,caminata,otro
-			var city ; // Lima
-			var aboutExperience;
-			var motive; // conocer gente/hacer amigos
-			var contact
-			return {
-				setActivity:function(str){
-					this.activity = str
-				}
-				,setExperience:function(str){
-					this.experience = str
-				}
-				,setCity:function(str){
-					this.city=str;
-				}
-				,setAbout:function(str){
-					this.aboutExperience = str;
-				}
-				,setMotive:function(str){
-					this.motive=str;
-				}
-				,setContact:function(n,p,m){
-					this.contact={
-						name  : n
-						,phone : p
-						,mail  : m
-					}
-				}				
-				,getAll:function(){
-					return{
-						activity:this.activity
-						,experience:this.experience
-						,city:this.city
-						,about:this.aboutExperience
-						,motive:this.motive
-						,contact:this.contact
-					}
-				}
-			}
-		}
-		var user = new MankiUser();
-		addEventListener("load",function(){
-			var links= document.getElementsByTagName("a");
-			for (var i=0;i<links.length;i++){
-				links[i].addEventListener("click",function(e){
-					e.preventDefault();
-				})
-			}
-		});	
-		var experiencesType =document.querySelectorAll('.item');
-		[].forEach.call(experiencesType,function(item){
-			item.addEventListener('click',function(){
-				user.setExperience(this.textContent);
-				var i =document.querySelectorAll('.item');
-				[].forEach.call(i,function(item){
-					item.setAttribute('class','small-12 medium-4 column item')
-				});
-				this.setAttribute('class','small-12 medium-4 column item active')
-			})
-		})	
-		
-		var li =document.querySelectorAll('.tabs-menu li a');
-		[].forEach.call(li,function(item){
-			item.addEventListener('click',function(){
-				var i =document.querySelectorAll('.tabs-menu li a');
-				[].forEach.call(i,function(item){
-					item.setAttribute('class','')
-				});
-				document.querySelector('.content.show').setAttribute('class','content')
-				var target = this.getAttribute('data-content');
+		window.user = {};
+		$(document).on("ready",function(){
+			$("a").on('click',function(e){
+				e.preventDefault();
+			});
+			$(".item").on('click',function(){
+				$(".item").removeClass('active');
+				$(this).addClass('active');
+			});
+			$(".tabs-menu li a").on('click',function(){
+				$(".tabs-menu li a").attr('class','');
+				document.querySelector('.content.show').setAttribute('class','content');
+				var target = $(this).attr('data-content');
 				document.querySelector('[data-target="'+target+'"]').setAttribute('class','content show')
-				this.setAttribute('class','active');
-			})
-		})		
-		
-		function setCity(){
-			user.setCity(document.querySelector('select[name="ciudad"]').options.selectedIndex);
-		}
-		function setAbout(){
-			user.setAbout(document.querySelector('textarea').value.trim());
-		}
-		function setMotive(){
-			user.setMotive(document.querySelector('select[name="motive"]').options.selectedIndex);
-		}
-		function setContact(name,phone,email){
-			user.setContact(name,phone,email);
-		}
-		function prepareForm(e){
-			if(!name || !phone || !email){
-				alert('ingrese nombre,teléfono y correo');	
-			}else{
+				$(this).attr('class','active');
+			});
+			$("[name='about'] .button.success.expanded").on('click',function(){
+				$("section[name='activity']").fadeIn();
+			});
+			$(".tabs-content-element button").on("click",function(){
+				$("[name='experience-type']").fadeIn();
+				$("[name='instructor-about']").fadeIn();
+			});
+			$("form").on("submit",function(e){
+				e.preventDefault();
 				var name = document.querySelector('input[name="name"]').value.trim();
-				var phone = document.querySelector('input[name="phone"]').value.trim()
-				var email = document.querySelector('input[name="mail"]').value.trim()
-				setContanct(name,phone,email);
-			}
-			e.preventDefault();
-			setCity();
-			setAbout();
-			setMotive();
-			setContact();
-			saveUser();
-		}	
-		function saveUser(){
-			var MankiUser = Parse.Object.extend("MankiUser");
-			var token = new MankiUser();
-
-			token.save(user.getAll(), {
-			success: function(u) {
-				// Execute any logic that should take place after the object is saved.
-				//alert('New object created with objectId: ' + gameScore.id);
-				console.log(u)
-				alert('Gracias por registrarte');
-			},
-			error: function(gameScore, error) {
-				// Execute any logic that should take place if the save fails.
-				// error is a Parse.Error with an error code and message.
-				console.log(error.message);
-			}
-			});			
-		}
-		document.querySelector('form').addEventListener('submit',prepareForm);	
+				var phone=document.querySelector('input[name="phone"]').value.trim();
+				var email=document.querySelector('input[name="mail"]').value.trim();
+				var about=document.querySelector('textarea').value.trim();
+				if(!name || !phone || !email || !about){
+					alert('Ingrese nombre,teléfono,correo y descripción')
+					return false	
+				}else{
+					window.user.name = name;
+					window.user.phone = phone;
+					window.user.email = email;
+					window.user.city  = document.querySelector('select[name="ciudad"]').options.selectedIndex;
+					window.user.about = about
+					window.user.motive= document.querySelector('select[name="motive"]').options.selectedIndex
+					window.user.experience=document.querySelector('.list .active a').textContent || document.querySelector('.list .active a').textContent;
+					console.log(window.user);
+					var MankiUser = Parse.Object.extend("MankiUser");
+					var token = new MankiUser();
+					token.save(window.user, {
+						success: function(u) {
+						// Execute any logic that should take place after the object is saved.
+						//alert('New object created with objectId: ' + gameScore.id);
+							console.log(u)
+							alert('Gracias por registrarte');
+						},
+						error: function(gameScore, error) {
+						// Execute any logic that should take place if the save fails.
+						// error is a Parse.Error with an error code and message.
+							console.log(error.message);
+						}
+					});							
+				}	
+			});
+		});
 	</script>
 </body>
 </html>
