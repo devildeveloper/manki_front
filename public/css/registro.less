@@ -1,0 +1,254 @@
+@green:rgb( 80,227,194);
+@gray:rgb(243,243,243);
+@darkGray:rgb(74,74,74);
+@orange:rgb(255,86,40);
+button{
+	background-color: @green !important;
+	border-radius: 8px !important;
+	padding-left:35px !important;
+	padding-right: 35px !important;
+	width: auto;
+	font-weight: bold;
+}
+input,textarea,select{
+	background-color: @gray !important;
+	color: @darkGray !important;
+	border:0 !important ;
+}
+input{
+	padding-left: 20px;
+}
+li{
+	list-style-type: none;
+}
+ul{
+	margin:0;
+	padding:0;
+	li{
+		margin-bottom: 20px;
+	}
+}
+.input{
+	height: 32px;
+	width: 100%;
+	position: relative;
+	.icon,input{
+		height: 32px;
+	}
+	.icon{
+		width:32px;
+		position: absolute;
+		top:0;
+		left:0;
+		background-repeat: no-repeat;
+		background-position: center center;
+		&.email{
+			background-image: url(../img/email_icon.png);
+		}
+		&.phone{
+			background-image: url(../img/phone_icon.png);
+		}
+		&.user{
+			background-image: url(../img/user_icon.png);
+		}		
+	}
+	input{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		text-indent: 32px;
+	}
+}
+.tabs-element{
+	border:0 !important;
+	.tabs-menu li{
+		display: inline-block;
+		width: 33%;
+		margin-right: -4px;
+		font-weight: bold;
+		border-bottom:0 !important;
+		color: inherit;
+		a{
+			color: rgb(211,211,211);
+			&.active{
+				color:@orange;
+			}
+		}
+	}
+	.tabs-content-element{
+		.content{
+			display: none;
+			p{
+				margin-top: 40px;
+			}
+			&.show{
+				display: block;
+			}
+		}
+	}
+}
+body,html{
+	font-size:16px;
+	color:@darkGray;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.main{
+	header{
+		padding-top: 20px;
+		background-image: url(../img/header_bg.png);
+		background-repeat:no-repeat;
+		background-size: 100%;
+		color: white;
+		h1{
+			margin-bottom: 250px;
+		}
+	}
+	[name="about"]{
+		padding-top: 20px;
+		img{
+			width: 50%;
+		}
+		button{
+			margin-top: 40px;
+		}
+	}
+	[name="experience-type"]{
+		display: none;
+		margin-top:80px;
+		.item{
+			margin-top:10px;
+			margin-bottom: 10px;
+			border-bottom: 1px dotted @darkGray;
+			padding: 10px;
+			a{
+				color: @darkGray;
+			}
+			&.active{
+				border-radius: 8px;
+				background-color: @orange;
+				a{
+					color: white;
+				}
+			}
+			&:first-child{
+				margin-top: 0;
+			}	
+		}
+	}
+	[name="instructor-about"]{
+		display: none;
+		padding-top: 80px;
+		h1{
+			font-size: 1rem;
+		}
+		p{
+			&.title{
+				margin-bottom: 20px;
+				margin-top: 30px;
+				&+p{
+					font-size: 0.8rem;
+				}
+			}&.subtitle{
+				margin-top: 25px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	[name="activity"]{
+		display: none;
+		padding-top: 100px;
+		h1{
+			font-size: 1rem;
+			margin-bottom: 30px;
+		}
+		li{
+			padding-bottom: 10px;
+			border-bottom: 1px dotted @darkGray;
+			&:last-child{
+				border-bottom: 0;
+			}
+		}		
+	}
+	footer{
+		background-color:@darkGray;
+		padding-top: 20px;
+		p{
+			color:white;
+			&+p{
+				color:@green;
+			}
+		}
+		.logo{
+			margin-bottom:100px;
+		}
+	}	
+}
+
+@media screen and (min-width: 40em) {
+	.main{
+		header{
+			background-image:url(../img/header_bg_2x.png);
+		}
+		[name="about"]{
+			p{
+				margin-top:40px;
+			}
+		}
+		[name="instructor-about"]{
+			h1{
+				font-size: 1.5rem;
+				margin-bottom: 30px;
+			}
+			p{
+				&.subtitle{
+					margin:0;
+					height: 32px;
+				}
+				&.title{
+					margin-top:0;
+				}
+			}
+			button{
+				margin-top: 60px;
+			}
+		}
+		[name="experience-type"]{
+			h1{
+				font-size: 1.5rem;
+			}
+			.item{
+				border-bottom: 0;	
+				&:first-child{
+					margin-top: 10px;
+				}	
+			}
+		}
+	}
+}
+@media screen and (min-width: 64em) {
+	.tabs-element{
+		.tabs-menu{
+			li{
+				text-align: left;
+				a{
+					color: @orange;
+				}
+			}
+		}
+		.tabs-content-element{
+			.content{
+				display: inline-block !important;
+				width: 33%;
+				margin-right: -4px;	
+				padding: 10px;
+			}
+		}		
+	}
+	.main{
+		[name="activity"]{
+			h1{
+				font-size: 1.5rem;
+			}
+		}
+	}
+}

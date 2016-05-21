@@ -1,0 +1,463 @@
+.image-sec-1,
+.image-sec-2,
+.image-sec-3 {
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.image-sec-1 {
+	background: url('../img/bg-manki-main.png') no-repeat center center scroll;
+    height: 600px;
+}
+
+.image-sec-2 {
+	background: url('../img/bg-manki-alt.jpg') no-repeat center center scroll;
+    height: 450px;
+}
+
+.image-sec-3 {
+	background: url('../img/bg-manki-bottom.jpg') no-repeat center center scroll;
+    background-size: cover;
+    display:inline-block;
+    width: 100%;
+}
+
+.img-center {
+	margin: 0 auto;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    margin: 30px 0;
+    font-size: 4em;
+}
+
+.section-lead {
+    margin: 30px 0;
+}
+
+.section-paragraph {
+    margin: 30px 0;
+}
+
+@media(max-width:768px) {
+    section {
+        padding-top: 25px;
+    }
+
+    .section-heading {
+        font-size: 2em;
+    }
+}
+
+/* Section text Codes*/
+.sec1{
+  color: #FFF;
+  font-size: 48pt;
+  line-height: 44pt;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+
+
+.sec1.text{
+  color: #FFF;
+  font-size: 16pt;
+  line-height: 18pt;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+.sec2{
+  color: #4A4A4A;
+  font-size: 40pX;
+  line-height: 40pX;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+.sec2.text{
+  color: #4A4A4A;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+.sec3{
+  color: #4A4A4A;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+.sec3.text{
+  color: #4A4A4A;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+.n-sec-4{
+    width:100%;
+    max-width: 600px;
+    margin:0 auto;
+
+}
+
+.sec4{
+
+  color:#4A4A4A;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+
+
+.sec4.text{
+  color:#4A4A4A;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+.sec5{
+  color: #FFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+h5.sec5{
+    width: 90%;
+    max-width: 360px;
+    margin:0 auto;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+
+.sec5.two{
+  color: #FFF;
+  font-size: 28px;
+    line-height:36px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+    width:90%;
+    display: inline-block;
+}
+
+.sec5.three{
+  color: #FFF;
+  font-size: 14pt;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+form.formanki{
+    margin-top:40px;
+
+}
+
+form.formanki .input-group{
+    margin-bottom:10px;
+}
+
+form.formanki .input-group span{
+    border:none;
+    background-color:#EEE;
+    position:relative;
+    top:-.5px;
+}
+
+form.formanki .form-control{
+    background-color:#EEEEEE;
+    border-style:solid;
+    border: none;
+    box-shadow: none;
+    height: 40px
+}
+
+
+/*Section Button Codes*/
+.facebook{
+  background: url('../img/icon-facebook.png') no-repeat center;
+  height: 83px;
+  width: 83px;
+  border: none;
+}
+
+.medium{
+  background: url('../img/icon-medium.png') no-repeat center;
+  height: 83px;
+  width: 83px;
+  border: none;
+}
+
+.guia{
+  background: url('../img/button-guia.png') no-repeat center;
+  width: 240pt;
+  height: 42pt;
+  border: none;
+}
+
+/*Section Modifications*/
+.sec2center{
+  text-align: center;
+  background-color: #F3F3F3;
+}
+
+.sec3center{
+  text-align: center;
+}
+
+.sec4center{
+  text-align: center;
+}
+
+.viajerotitle{
+  left:15px;
+  letter-spacing: 15px;
+  color: #FF5628;
+  font-size: 12px;
+  line-height: 15pt;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+.guiatitle{
+  left:15px;
+  letter-spacing: 15px;
+  color: #66D1BC;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+.img-responsive-manki{
+    height:300px;
+    background-image: url("../img/bg-manki-alt.jpg");
+    background-size: cover;
+    background-position: right
+}
+
+/*Video CSS*/
+
+body {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#video-landing {
+	height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+  color: white;
+}
+
+#video-landing video {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  top: -200px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -100;
+}
+
+@media (max-width:768px){
+    #video-landing video{
+        display: none;
+    }
+}
+
+/* First Section*/
+
+.n-margin{
+    width: 80%;
+    max-width: 1250px;
+    margin:0 auto;
+}
+
+.sec1bg {
+  background-image: url('../img/bg-manki-main.jpg');
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  height: 560px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.logo-manki-main{
+    height:68px;
+    width: 51px;
+    margin-top:40px;
+}
+
+.sec1bg .intro-text .intro-lead-in {
+  padding-top: 54px;
+  color: #FFF;
+  font-size: 40pt;
+  line-height: 44pt;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+.sec1bg .intro-text .intro-heading {
+    width:70%;
+    min-width: 300px;
+    margin: 0 auto;
+  padding-top: 39px;
+  color: #FFF;
+  font-size: 16pt;
+  line-height: 18pt;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .sec1bg .intro-text {
+    padding-bottom: 351px;
+  }
+
+.logo-manki-main{
+    height:136px;
+    width: 102px;
+    margin-top:0;
+}
+
+  .sec1bg .intro-text .intro-lead-in {
+    padding-top: 54px;
+    color: #FFF;
+    font-size: 48pt;
+    line-height: 44pt;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+  }
+  .sec1bg .intro-text .intro-heading {
+    padding-top: 39px;
+    color: #FFF;
+    font-size: 16pt;
+    line-height: 18pt;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+  }
+
+    .img-responsive-manki{
+    max-width: 100%;
+    height: 460px;
+    background-image: url("../img/bg-manki-alt.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right;
+}
+
+}
+
+
+/* Buttons */
+.waves-effect{
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  will-change: opacity, transform;
+  transition: all .3s ease-out;
+}
+
+.btn-viajero {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #FF5628;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  font-size: 10pt;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  width: 240px;
+  height: 40px;
+  border: none;
+}
+
+.btn-guia {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 10pt;
+  background-color: #66D1BC;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  width: 240px;
+  height: 40px;
+  border: none;
+}
+
+.btn-enviar {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 10pt;
+  background-color: #66D1BC;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  width: 240px;
+  height: 40px;
+  border: none;
+  /*box-shadow: 10px 10px 5px #888888;*/
+}
+
+.input{
+  width: 461px;
+  height: 41px;
+  background-color: #f3f3f3;
+}
