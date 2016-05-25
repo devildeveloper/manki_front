@@ -143,7 +143,7 @@
 												<img src="img/bus.png" alt="">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success" type="button" onclick="window.user.activity='explorar'">CONTINUAR</button>
+												<button class="button success setActivity" type="button" data-activity="explorar">CONTINUAR</button>
 											</div>
 										</div>
 									</div>
@@ -156,7 +156,7 @@
 												<img src="img/binoculares.png" alt="">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success" type="button" onclick="window.user.activity='enseñar'">CONTINUAR</button>
+												<button class="button success setActivity" type="button" data-activity="enseñar">CONTINUAR</button>
 											</div>
 										</div>
 									</div>
@@ -169,7 +169,7 @@
 												<img src="img/patines.png" alt="">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success" type="button" onclick="window.user.activity='entretener'">Continuar</button>
+												<button class="button success setActivity" type="button" data-activity="entretener">Continuar</button>
 											</div>
 										</div>
 									</div>
@@ -359,6 +359,36 @@
 				$("[name='experience-type']").fadeIn();
 				$("[name='instructor-about']").fadeIn();
 			});
+			$(".setActivity").on('click',function(){
+				var value = $(this).attr('data-activity');
+				console.log(value);
+				window.user.activity=value;
+				if(value ==='explorar'){
+					$(".item a")[0].textContent = 'Tour por el barrio'
+					$(".item a")[1].textContent = 'Día de excursión'
+					$(".item a")[2].textContent = 'Tour de comidas y bebidas'
+					$(".item a")[3].textContent = 'Tour de arte y diseño'
+					$(".item a")[4].textContent = 'Bike tour'
+					$(".item a")[5].textContent = 'Caminata'
+					$(".item a")[6].textContent = 'Otro'
+				}else if(value==='enseñar'){
+					$(".item a")[0].textContent = 'Clase de cocina'
+					$(".item a")[1].textContent = 'Clase de cerveza'
+					$(".item a")[2].textContent = 'Vinos y licores'
+					$(".item a")[3].textContent = 'Taller creativo'
+					$(".item a")[4].textContent = 'Clases de yoga'
+					$(".item a")[5].textContent = 'Clases de surf'
+					$(".item a")[6].textContent = 'Otros'					
+				}else{
+					$(".item a")[0].textContent = 'Fiesta en casa'
+					$(".item a")[1].textContent = 'Fiesta temática'
+					$(".item a")[2].textContent = 'Fiesta al aire libre'
+					$(".item a")[3].textContent = 'Cena en un lugar único'
+					$(".item a")[4].textContent = 'Desayuno de media mañana'
+					$(".item a")[5].textContent = 'Noche de películas'
+					$(".item a")[6].textContent = 'Otro'					
+				}
+			})
 			$("form").on("submit",function(e){
 				e.preventDefault();
 				var name = document.querySelector('input[name="name"]').value.trim();
