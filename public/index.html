@@ -130,7 +130,7 @@
         <h1 class="sec4">¡Sé un viajero Manki!</h1>
         <h3 class="sec4 text">Nuestra comunidad esta creciendo y desarrollándose, y muy pronto lanzaremos la plataforma. Si quieres ser uno de los primeros en probarla, inscríbete aquí:</h3>
 
-        <form class="formanki" action="https://formspree.io/hola@mankiapp.com" method="POST">
+        <form class="formanki traveler" action="https://formspree.io/hola@mankiapp.com" method="POST">
           <div class="row">
             <div class="input-group col-xs-8 col-xs-push-2 col-xs-pull-2 col-sm-8 col-sm-push-2 col-sm-pull-2 col-md-8 col-md-push-2 col-md-pull-2 col-lg-8 col-lg-push-2 col-lg-pull-2 col-xl-8 col-xl-push-2 col-xl-pull-2">
                 <span class="glyphicon glyphicon-user input-group-addon" aria-hidden="true" style="color:#ff5638;"></span>
@@ -163,7 +163,7 @@
           <h5 class="sec5">Si te gusta nuestra visión y estás interesado en nuestro proyecto, puedes seguirnos en redes sociales</h5><br>
           <button class="facebook"></button> <button class="medium"></button><br>
           <h5 class="sec5">¿Te parece una idea interesate? En Manki estamos buscando gente que quiera apoyarnos.<br><br>Si te interesa invertir en nosotros o colaborar con el proyecto, déjanos tu e-mail y nos pondremos en contacto contigo</h5>
-          <form class="formanki" action="https://formspree.io/hola@mankiapp.com" method="POST">
+          <form class="formanki newsletter" action="https://formspree.io/hola@mankiapp.com" method="POST">
             <div class="row">
               <div class="input-group col-xs-8 col-xs-push-2 col-xs-pull-2 col-sm-8 col-sm-push-2 col-sm-pull-2 col-md-8 col-md-push-2 col-md-pull-2 col-lg-8 col-lg-push-2 col-lg-pull-2 col-xl-8 col-xl-push-2 col-xl-pull-2">
                   <input type="email" class="form-control" aria-describedby="basic-addon1" name="_replyto_shareholder" placeholder="ejemplo@test.com">
@@ -183,6 +183,17 @@
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+	  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBnSM4GxKgMgvn6EzMcqsHahu6BD683ujQ",
+      authDomain: "manki-platform.firebaseapp.com",
+      databaseURL: "https://manki-platform.firebaseio.com",
+      storageBucket: "manki-platform.appspot.com",
+    };
+    firebase.initializeApp(config);
+    </script>    
     <script>
     $(function() {
       $('a[href*="#viajero"]:not([href="#"])').click(function() {
@@ -199,7 +210,37 @@
       });
     });
     </script>
-
+    <script>
+      $(document).on("ready",function(){
+        $(".formanki.traveler").on('submit',function(e){
+          e.preventDefault();
+          var traveler = {
+            name :$("input[type='text']").val()
+            ,email:$("input[type='email']").val()
+          }
+					//get new key
+					var newTravelerKey = firebase.database().ref().child('traveler').push().key;
+					//new guide
+					var updates = {};
+					updates['/travelers/' + newTravelerKey] = traveler;
+					console.log(firebase.database().ref().update(updates)); 
+          alert('gracias por registrarte')         
+        });
+        $(".formanki.newsletter").on('submit',function(e){
+          e.preventDefault();
+          var newsLetter = {
+            email:$("input[name='_replyto_shareholder']").val()
+          }
+					//get new key
+					var newNewsLetterKey = firebase.database().ref().child('newsletter').push().key;
+					//new guide
+					var updates = {};
+					updates['/newsletters/' + newNewsLetterKey] = newsLetter;
+					console.log(firebase.database().ref().update(updates)); 
+          alert('gracias por suscribirte')         
+        })        
+      })
+    </script>
 </body>
 
 </html>

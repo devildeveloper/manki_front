@@ -244,9 +244,11 @@
 					</p>
 				</div>
 				<div class="small-12 medium-6 column">
-					<select name="ciudad" id="">
-						<option value="0">Lima</option>
-					</select>
+					<div class="input" style="margin-bottom:20px">
+						<div class="clearbox"></div>
+						<i class="icon user"></i>
+						<input type="text" name="city" required placeholder="Lima">
+					</div>
 				</div>
 			</div>
 			<div class="row">
@@ -266,9 +268,11 @@
 					</p>
 				</div>
 				<div class="small-12 medium-6 column text-center medium-text-left">
-					<select name="motive" id="">
-						<option value="0">Conocer gente/hacer amigos</option>
-					</select>
+					<div class="input" style="margin-bottom:20px">
+						<div class="clearbox"></div>
+						<i class="icon user"></i>
+						<input type="text" name="motive" required placeholder="Conocer gente,hacer amigos">
+					</div>
 				</div>
 			</div>
 			<div class="row">
@@ -330,10 +334,6 @@
 	<script src="js/picture.min.js"></script>
 	<script src="js/parse.latest.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-<!--	<script>
-		Parse.initialize('myAppId')
-		Parse.serverURL='http://54.175.72.64:1337/parse';
-	</script> -->
 	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 	<script>
 	// Initialize Firebase
@@ -405,40 +405,30 @@
 				var phone=document.querySelector('input[name="phone"]').value.trim();
 				var email=document.querySelector('input[name="mail"]').value.trim();
 				var about=document.querySelector('textarea').value.trim();
-				if(!name || !phone || !email || !about){
-					alert('Ingrese nombre,teléfono,correo y descripción')
+				var city=document.querySelector('input[name="city"]').value.trim();
+				var motive=document.querySelector('input[name="motive"]').value.trim();
+				
+				if(!name || !phone || !email || !about || !city || !motive ){
+					alert('Ingrese nombre,teléfono,correo, descripción, ciudad y motivo')
 					return false
 				}else{
 					window.user.name = name;
 					window.user.phone = phone;
 					window.user.email = email;
-					window.user.city  = document.querySelector('select[name="ciudad"]').options.selectedIndex;
-					window.user.about = about
-					window.user.motive= document.querySelector('select[name="motive"]').options.selectedIndex
+					window.user.city  = city;
+					window.user.about = about;
+					window.user.motive= motive;
 					window.user.experience=document.querySelector('.list .active a').textContent || document.querySelector('.list .active a').textContent;
 					console.log(window.user);
-					//get new key
-					var newGuideKey = firebase.database().ref().child('guide').push().key;
-					//new guide
-					var updates = {};
-					updates['/guides/' + newGuideKey] = window.user;
-					console.log(firebase.database().ref().update(updates));
-					alert('Gracias por registrarte');
-					/*var MankiUser = Parse.Object.extend("MankiUser");
-					var token = new MankiUser();
-					token.save(window.user, {
-						success: function(u) {
-						// Execute any logic that should take place after the object is saved.
-						//alert('New object created with objectId: ' + gameScore.id);
-							console.log(u)
+					var ref  = firebase.database().ref().child('guides')
+					ref.push(window.user,function(err,saved){
+						if(!err){
 							alert('Gracias por registrarte');
-						},
-						error: function(gameScore, error) {
-						// Execute any logic that should take place if the save fails.
-						// error is a Parse.Error with an error code and message.
-							console.log(error.message);
+							window.location.href='http://mankiapp.com'
+						}else{
+							alert('ha ocurrido un error, intente de nuevo en breve')
 						}
-					});*/
+					});
 				}
 			});
 		});
