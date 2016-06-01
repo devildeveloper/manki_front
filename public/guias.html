@@ -11,16 +11,19 @@
 
 <html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="description" content="tourism">
-	<meta name="author" content="Sung Min Kim">
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="distribution" content="global" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Vive experiencias auténticas y locales en la cuidad." />
+    <meta name="keywords" content="manki, experiencias, experiencias locales, que hacer en, que hacer en la cuidad, vivir experiencias, hacer amigos, conocer nuevas personas, conocer la ciudad" />
+    <meta name="author" content="Sung Min Kim" />
 
 	<title>Manki | Guias</title>
 	<link rel="stylesheet" href="css/foundation.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/guias.css">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
@@ -44,6 +47,7 @@
 	<!--Google Fonts-->
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -71,16 +75,16 @@
 <body>
 	<form method="POST" action="#" class="main">
 		<!--Section 1-->
-		<header>
-			<div class="row">
-				<div class="small-10 small-offset-1 column text-center">
-					<div class="logo">
+		<header class="skew-section skew-section--full-height skew-section--full-width">
+			<div class="row skew-section__content">
+				<div class="text-center">
+					<div class="logo header__logo">
 						<picture>
 							<source srcset="img/manki_logo_blanco_2x.png" media="(min-width: 40em)">
-							<img srcset="img/manki_logo_blanco.png" alt="Manki Logo">
+							<img srcset="img/manki_logo_blanco.png" alt="Logo de Manki">
 						</picture>
 					</div>
-					<h1>
+					<h1 class="header__title">
 						Una nueva forma de conocer el mundo cuando viajas.
 					</h1>
 				</div>
@@ -88,33 +92,28 @@
 		</header>
 
 		<!--Section 2-->
-		<section name="about">
-			<div class="row">
-				<div class="small-3 column">
-					<img src="img/manki_exp_guiadas.png" alt="manki experiencias guiadas">
+		<section name="about" class="skew-section skew-section--full-width skew-section--grey">
+			<div class="row skew-section__content">
+				<div class="small-4 column">
+					<img src="img/manki_exp_guiadas.png" alt="Manki experiencias guiadas">
 				</div>
-				<div class="small-9 medium-7 column end">
-					<h2>¿Qué te apasiona?</h2>
-					<p>Vamos a ver lo que te apasiona, y que tipo de experiencias puedes brindar en tu ciudad</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="small-8 small-offset-2 medium-5 medium-offset-6 column end text-center">
-					<button class="button success expanded" type="button">CONTINUAR</button>
+				<div class="small-8 medium-8 column end about__text">
+					<h2 class="main__title">¿Qué te apasiona?</h2>
+					<p class="subtitle list__item">Vamos a ver lo que te apasiona, y que tipo de experiencias puedes brindar en tu ciudad</p>
+					<button class="button button--success" type="button">CONVERTIRME EN UN GUIA DE EXPERIENCIAS</button>
 				</div>
 			</div>
 		</section>
 
 		<!--Section 3-->
-		<section name="activity">
-			<div class="row">
+		<section name="activity" class="skew-section skew-section--full-width">
+			<div class="row skew-section__content">
 				<div class="small-12 column text-center medium-text-left">
 					<picture class="hide-for-small-only">
 							<source srcset="img/manki_logo_negro_2x.png" media="(min-width: 64em)">
-							<img srcset="img/manki_logo_negro.png"  alt="logo negro">
+							<img srcset="img/manki_logo_negro.png"  alt="Logo gris de Manki">
 					</picture>
-
-					<h1>¿Qué actividades te apasionan?</h1>
+					<h1 class="main__title">¿Qué actividades te apasionan?</h1>
 				</div>
 				<div class="small-12 column">
 					<div class="row">
@@ -123,53 +122,55 @@
 								<div class="tabs-menu">
 									<ul>
 										<li>
-											<a href="#" data-content="c1" class="active">Explorar</a>
+											<a href="#" data-content="c1" class="active activities__text">Explorar</a>
 										</li>
 										<li class="text-center">
-											<a href="#" data-content="c2" >Enseñar</a>
+											<a href="#" data-content="c2" class="activities__text">Enseñar</a>
 										</li>
 										<li class="text-right">
-											<a href="#" data-content="c3" >Entretener</a>
+											<a href="#" data-content="c3" class="activities__text">Entretener</a>
 										</li>
 									</ul>
 								</div>
 								<div class="tabs-content-element">
 									<div class="content show" data-target="c1">
 										<div class="row">
-											<div class="small-8 column">
-												<p>Lidera aventuras para explorar cada vecindario y las calles alrededor. Ya sea que se trate de una aventura culinaria por la ciudad, una caminata para disfrutar de la arquitectura de la ciudad, una excursión en bicicleta o todo un día de aventura, sal y muestra lo mejor de tu ciudad.</p>
+											<div class="small-8 column skew-section skew-section--min skew-section--grey">
+												<p class="skew-section__content">Lidera aventuras para explorar cada vecindario y las calles alrededor. Ya sea que se trate de una aventura culinaria por la ciudad, una caminata para disfrutar de la arquitectura de la ciudad, una excursión en bicicleta o todo un día de aventura, sal y muestra lo mejor de tu ciudad.</p>
 											</div>
 											<div class="small-4 column">
-												<img src="img/bus.png" alt="">
+												<img src="img/bus.png" alt="Lidera aventuras para explorar" class="tab-content__img">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success setActivity" type="button" data-activity="explorar">CONTINUAR</button>
+												<button class="button button--success button--success--chose setActivity" type="button" data-activity="explorar">Elegir</button>
 											</div>
 										</div>
 									</div>
 									<div class="content" data-target="c2">
 										<div class="row">
-											<div class="small-8 column">
-												<p class="options">Comparte tu talento, ya sea que se trate de clases de fotografía al aire libre, o enseñar a preparar ese platillo favorito que tanto te gusta, a todo el mundo le encanta poder aprender algo nuevo.</p>
+											<div class="small-8 column skew-section skew-section--min skew-section--grey">
+												<p class="options skew-section__content">Comparte tu talento, ya sea que se trate de clases de fotografía al aire libre, o enseñar a preparar ese platillo favorito que tanto te gusta, a todo el mundo le encanta poder aprender algo nuevo.</p>
 											</div>
 											<div class="small-4 column">
-												<img src="img/binoculares.png" alt="">
+												<img src="img/binoculares.png" alt="Comparte tu talento, enseñando lo que sabes" class="tab-content__img tab-content__img--center">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success setActivity" type="button" data-activity="enseñar">CONTINUAR</button>
+												<button class="button button--success button--success--chose setActivity" type="button" data-activity="enseñar">Elegir</button>
 											</div>
 										</div>
 									</div>
 									<div class="content" data-target="c3">
 										<div class="row">
-											<div class="small-8 column">
-												<p class="options2">A todos nos encanta compartir momentos juntos. Ya sea una cena en una azotea con vista a la ciudad, un picnic al aire libre, o una fiesta temática, la clandestinidad hace de estos momentos único e irrepetibles.</p>
+											<div class="small-8 column skew-section skew-section--min skew-section--grey">
+												<p class="options2 skew-section__content">A todos nos encanta compartir momentos juntos. Ya sea una cena en una azotea con vista a la ciudad, un picnic al aire libre, o una fiesta temática, la clandestinidad hace de estos momentos único e irrepetibles.</p>
 											</div>
 											<div class="small-4 column">
-												<img src="img/patines.png" alt="">
+												<img src="img/patines.png" alt="Compartir momentos juntos" class="tab-content__img">
 											</div>
 											<div class="small-12 column text-right">
-												<button class="button success setActivity" type="button" data-activity="entretener">Continuar</button>
+												<button class="button button--success button--success--chose setActivity" type="button" data-activity="entretener">
+													Elegir
+												</button>
 											</div>
 										</div>
 									</div>
@@ -181,65 +182,66 @@
 			</div>
 		</section>
 
-		<section>
-		<div class="row" name="experience-type">
-			<div class="small-12 column text-center medium-text-left">
-				<picture >
-						<source srcset="img/manki_logo_negro_2x.png" media="(min-width: 40em)">
-						<img srcset="img/manki_logo_negro.png" alt="logo negro">
-				</picture>
-				<h1>
-					¿Qué tipo de experiencia <br>
-					exploradora te gustaría guiar?
-				</h1>
-			</div>
-			<div class="small-12 column text-center">
-				<div class="row list">
-					<div class="small-12 medium-4 column item">
-						<a href="">Tour por el barrio</a>
-					</div>
-					<div class="small-12 medium-4 column item">
-						<a href="">Día de excursión</a>
-					</div>
-					<div class="small-12  medium-4 column item">
-						<a href="">Tour de comidas y bebidas</a>
-					</div>
-					<div class="small-12 medium-4 column item">
-						<a href="">Tour de arte y diseño</a>
-					</div>
-					<div class="small-12 medium-4 column item">
-						<a href="">Bike tour</a>
-					</div>
-					<div class="small-12 medium-4 column item active">
-						<a href="">Caminata</a>
-					</div>
-					<div class="small-12 medium-4 medium-offset-8 column item">
-						<a href="">Otro</a>
+		<!-- Section 3 -->
+		<section name="experiences" class="skew-section skew-section--full-width skew-section--grey">
+			<div class="row skew-section__content" name="experience-type">
+				<div class="small-12 column text-center medium-text-left">
+					<picture >
+							<source srcset="img/manki_logo_negro_2x.png" media="(min-width: 40em)">
+							<img srcset="img/manki_logo_negro.png" alt="Logo gris de Manki">
+					</picture>
+					<h2 class="main__title">
+						¿Qué tipo de experiencia <br>
+						exploradora te gustaría guiar?
+					</h2>
+				</div>
+				<div class="small-12 column text-center">
+					<div class="row list">
+						<div class="small-12 medium-4 column item">
+							<a href="" class="list__item">Tour por el barrio</a>
+						</div>
+						<div class="small-12 medium-4 column item">
+							<a href="" class="list__item">Día de excursión</a>
+						</div>
+						<div class="small-12  medium-4 column item">
+							<a href="" class="list__item">Tour de comidas y bebidas</a>
+						</div>
+						<div class="small-12 medium-4 column item">
+							<a href="" class="list__item">Tour de arte y diseño</a>
+						</div>
+						<div class="small-12 medium-4 column item">
+							<a href="" class="list__item">Bike tour</a>
+						</div>
+						<div class="small-12 medium-4 column item active">
+							<a href="" class="list__item">Caminata</a>
+						</div>
+						<div class="small-12 medium-4 medium-offset-8 column item">
+							<a href=" " class="list__item">Otro</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
 		<!--Section 4-->
-		<section name="instructor-about">
-			<div class="row">
+		<section name="instructor-about" class="skew-section skew-section--full-width">
+			<div class="row skew-section__content">
 				<div class="small-12 column text-center medium-text-left">
 					<div class="logo">
 						<picture >
 								<source srcset="img/manki_logo_naranja_2x.png" media="(min-width: 40em)">
-								<img srcset="img/manki_logo_naranja.png" alt="logo manki rojo">
+								<img srcset="img/manki_logo_naranja.png" alt="Logo anaranjado de Manki">
 						</picture>
 					</div>
-					<h1>
+					<h2 class="main__title">
 						Cuéntanos un poco más de la <br>
 						experiencia que guiarás
-					</h1>
+					</h2>
 				</div>
 			</div>
-			<div class="row">
-				<div class="small-12 medium-6 column text-center medium-text-left">
-					<p class="subtitle">
+			<div class="row skew-section__content">
+				<div class="small-12 medium-6 column text-center medium-text-left vertical-align__form">
+					<p class="subtitle list__item vertical--align__content">
 						¿En qué ciudad te gustaría ofrecer esta experiencia?
 					</p>
 				</div>
@@ -247,23 +249,23 @@
 					<div class="input" style="margin-bottom:20px">
 						<div class="clearbox"></div>
 						<i class="icon user"></i>
-						<input type="text" name="city" required placeholder="Lima">
+						<input type="text" name="city" required placeholder="Lima" class="list__item">
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="small-12 medium-6 column text-center medium-text-left">
-					<p class="subtitle">
-						Cuentanos brevemente sobre cómo será tu experiencia guiada
+			<div class="row skew-section__content">
+				<div class="small-12 medium-6 column text-center medium-text-left vertical-align__form">
+					<p class="subtitle list__item vertical--align__content">
+						Cuéntanos brevemente sobre cómo será tu experiencia guiada
 					</p>
 				</div>
 				<div class="small-12 medium-6 column">
-					<textarea name="desc" rows="5" placeholder="Ej: Haré un tour por mi barrio, mostrando los lugares que cuentan historias de mi ciudad. Además, invitaré un plato típico."></textarea>
+					<textarea name="desc" rows="5" placeholder="Ej: Haré un tour por mi barrio, mostrando los lugares que cuentan historias de mi ciudad. Además, invitaré un plato típico." class="list__item"></textarea>
 				</div>
 			</div>
-			<div class="row">
-				<div class="small-12 medium-6 column text-center medium-text-left">
-					<p class="subtitle">
+			<div class="row skew-section__content">
+				<div class="small-12 medium-6 column text-center medium-text-left vertical-align__form">
+					<p class="subtitle list__item vertical--align__content">
 						¿Qué es lo que más te motiva a ofrecer esta experiencia?
 					</p>
 				</div>
@@ -271,14 +273,15 @@
 					<div class="input" style="margin-bottom:20px">
 						<div class="clearbox"></div>
 						<i class="icon user"></i>
-						<input type="text" name="motive" required placeholder="Conocer gente,hacer amigos">
+						<input type="text" name="motive" required placeholder="Conocer gente,hacer amigos" class="list__item">
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row skew-section__content">
 				<div class="small-12 medium-6 column text-center medium-text-left">
-					<p class="title">Por último, déjanos un correo y un teléfono de contacto.</p>
-					<p>El teléfono es opcional, pero nos ayudará a comunicarnos contigo con mayor rapidez.
+					<p class="subtitle list__item">Por último, déjanos un correo y un teléfono de contacto.</p>
+					<p class="subtitle-small">Para contactarnos contigo necesitamos  tu nombre, tu teléfono y tu correo electrónico.</p>
+					<p class="subtitle-small">El teléfono es opcional, pero nos ayudará a comunicarnos contigo con mayor rapidez.
 						Nunca publicaremos tus datos ni los compartiremos con terceros.
 					</p>
 				</div>
@@ -288,41 +291,42 @@
 							<div class="input">
 								<div class="clearbox"></div>
 								<i class="icon user"></i>
-								<input type="text" name="name" required placeholder="Stephen Hawking">
+								<input type="text" name="name" required placeholder="Stephen Hawking" class="list__item">
 							</div>
 						</li>
 						<li>
 							<div class="input">
 								<i class="icon phone"></i>
-								<input type="text" name="phone" required placeholder="987 654 321">
+								<input type="text" name="phone" required placeholder="987 654 321" class="list__item">
 							</div>
 						</li>
 						<li>
 							<div class="input">
 								<i class="icon email"></i>
-								<input type="email" name="mail" required placeholder="algo@ejemplo.com">
+								<input type="email" name="mail" required placeholder="algo@ejemplo.com" class="list__item">
 							</div>
 						</li>
 					</ul>
 				</div>
-				<div class="small-12 text-center">
-					<button class="button success" type="submit">ENVIAR</button>
+				<div class="small-12 column text-center">
+					<button class="button button--success" type="submit">ENVIAR</button>
 				</div>
 			</div>
 		</section>
 
-
 		<!--Footer-->
 		<footer>
 			<div class="row">
-				<div class="small-12 column text-center">
-					<p>¿Dudas? Escríbenos:</p>
-					<p>hola@mankiapp.com</p>
-					<div class="logo">
-						<picture >
+				<div class="small-12 column text-center vertical-align__footer">
+					<div class="vertical-align__content">
+						<p>¿Dudas? Escríbenos:</p>
+						<p>info@mankiapp.com</p>
+						<div class="logo">
+							<picture >
 								<source srcset="img/manki_logo_blanco_2x.png" media="(min-width: 40em)">
-								<img srcset="img/manki_logo_blanco.png" alt="logo manki blanco">
-						</picture>
+								<img srcset="img/manki_logo_blanco.png" alt="Logo de Manki">
+							</picture>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -362,7 +366,7 @@
 				document.querySelector('[data-target="'+target+'"]').setAttribute('class','content show')
 				$(this).attr('class','active');
 			});
-			$("[name='about'] .button.success.expanded").on('click',function(){
+			$("[name='about'] .button.button--success").on('click',function(){
 				$("section[name='activity']").fadeIn();
 			});
 			$(".tabs-content-element button").on("click",function(){

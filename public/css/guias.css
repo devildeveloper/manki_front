@@ -1,0 +1,206 @@
+/* Styles for guias page */
+
+.skew-section {
+	height: auto;
+    position: relative;
+    z-index: 1;
+    display: block;
+    float: left;
+    background-color: #fff;
+    margin-top: 0px;
+    -ms-transform:skew(0deg,10deg); /* IE 9 */
+	-webkit-transform:skew(0deg,5deg); /* Safari and Chrome */
+}
+
+.skew-section--full-height {
+	height: 100vh;
+    margin-top: -100px;
+}
+
+.skew-section--full-width {
+	width: 100%;
+}
+
+.skew-section--grey {
+	background-color: #F3F3F3;
+}
+
+.skew-section--min {
+	width: 92%;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+.skew-section__content {
+	-ms-transform:skew(0deg,-10deg); /* IE 9 */
+	-webkit-transform:skew(0deg,-5deg); /* Safari and Chrome */
+	margin-bottom: 30px;
+}
+
+.header__logo {
+	margin-top: 223px;
+	margin-bottom: 43.7px;
+	width: 100%;
+}
+
+.header__title {
+	max-width: 673px;
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 40px;
+    margin: 0 auto;
+}
+
+.about__text {
+	margin-top: 0px;
+}
+
+.button--success {
+	background-color: #66D1BC !important;
+  	border-radius: 8px !important;
+  	font-weight: 700;
+	color: #fff;
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 80px;
+	font-family: 'Open Sans Condensed';
+	text-transform: uppercase;
+	margin-left: -86px;
+    padding: 10px 5px;
+    font-size: 13px;
+}
+
+.button--success--chose {
+	margin-top: -10px;
+	margin-bottom: 0px;
+	padding: 10px 20px;
+	position: relative;
+    z-index: 2;
+}
+
+.activities__text {
+	font-size: 18px !important;
+	text-transform: uppercase;
+	font-family: 'Open Sans Condensed';
+	font-weight: 700;
+}
+
+.tab-content__img {
+    margin-top: -20px;
+    position: absolute;
+    z-index: 2;
+    width: 80px;
+    top: 170px;
+    right: 0;
+}
+
+.tab-content__img--center {
+	margin-top: -30px;
+	top: 205px;
+}
+
+.main__title {
+	font-size: 1rem;
+    padding-top: 40px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.list__item {
+	font-size: 0.9rem;
+}
+
+.subtitle-small {
+	font-size: 18px;
+}
+
+.vertical-align__form {
+    height: 60px;
+    display: table;
+    margin-top: 11px;
+}
+
+.vertical-align__footer {
+    height: 300px;
+    display: table;
+}
+
+.vertical-align__content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.main [name="experiences"] .skew-section__content {
+	padding: 50px 0px;
+}
+
+@media screen and (min-width: 40em) {
+	.header__title {
+		font-size: 64px;
+		line-height: 72px;
+	}
+
+	.main [name="about"] img {
+		width: 60%;
+	}
+
+	.main__title {
+		font-size: 2.5rem;
+	}
+
+	.list__item {
+		font-size: 24px;
+	}
+
+	.about__text {
+		margin-top: 50px;
+	}
+
+	.button--success {
+		font-size: 30px;
+		padding: 18px 23px;
+		margin-left: auto;
+	}
+
+	.activities__text {
+		font-size: 48px;
+	}
+
+	.skew-section--min {
+		width: 96%;
+		font-size: inherit;
+		margin-top: 30px;
+    	padding: 10px 50px 10px 10px;
+	}
+
+	.tab-content__img {
+		margin-top: 0px;
+		margin-left: -50px;
+		top: 223px;
+	}
+
+	.tab-content__img--center {
+		top: 240px;
+	}
+}
+
+@media screen and (min-width: 64em) {
+	.skew-section--min {
+		width: 66.6667%;
+		font-size: inherit;
+		margin-left: auto;
+		margin-top: auto;
+		padding: 0px 15px;
+	}
+
+	.tab-content__img {
+		position: relative;
+		top: auto;
+		margin-top: -20px;
+	}
+
+	.tab-content__img--center {
+		top: auto;
+		margin-top: -8px;
+	}
+}
