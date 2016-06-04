@@ -9,16 +9,17 @@
 
 </script>
 
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="distribution" content="global" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Vive experiencias auténticas y locales en la cuidad." />
     <meta name="keywords" content="manki, experiencias, experiencias locales, que hacer en, que hacer en la cuidad, vivir experiencias, hacer amigos, conocer nuevas personas, conocer la ciudad" />
-    <meta name="author" content="Sung Min Kim" />
+    <meta name="author" content="Arelis Chicchón" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
@@ -39,17 +40,16 @@
     <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Manki</title>
+	<title>Manki</title>
 
-    <!-- Bootstrap-->
+	<!-- Bootstrap-->
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/new-landing.css" rel="stylesheet">
 
-    <!--Google Fonts-->
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700' rel='stylesheet' type='text/css'>
+	<!-- Block Scroll CSS -->
+    <link rel="stylesheet" type="text/css" href="css/blockScroll.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -72,122 +72,129 @@
     src="https://www.facebook.com/tr?id=1348088305207969&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
-  </head>
+</head>
+<body>
+	<div id="main-wrap">
+		<div class="item-slide item-slide--active">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height traveler-bg">
+					<div class="row menu-nav">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<object data="img/logo-de-manki.svg" type="image/svg+xml" class="logo-manki"></object>
+						</div>
+						<a class="col-lg-2 col-md-3 col-sm-2 col-xs-3 active text-center" href="#">
+							<h1 class="text-oswald-regular">Viajeros</h1>
+						</a>
+						<a class="col-lg-2 col-md-3 col-sm-2 col-xs-3 text-center" href="guias.html">
+							<h1 class="text-oswald-regular">Guías</h1>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text display-table">
+					<div class="vertical-align">
+						<div class="col--full-text--width">
+							<h2 class="h1 main-title">Porque nos encanta viajar</h2>
+							<p class="main-subtitle">Desde el principio, los viajes han sido una parte vital denuestras vidas, de nuestra identidad y una forma de mostrar nuestra libertad.</p>
+							<div class="btn--hover">
+								<a href="#SeUnViajero" class="btn-default btn-default--traveler">
+									<span class="text-oswald-regular">Quiero ser un viajero manki</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<body class="container-fluid">
-    <!-- First Section -->
-    <section class="sec1bg">
-        <div class="row">
-            <div class="intro-text">
-                <img class="logo-manki-main" src="img/logo.png" alt="Logo de Manki">
-                <div class="intro-lead-in">Vive experiencias auténticas.</div>
-                <h1 class="intro-heading">Manki es una plataforma que conecta a viajeros con guías locales, para que ambos puedan disfrutar una gran experiencia en la ciudad.</h1>
-            </div>
-        </div>
-    </section>
+		<!-- Second block -->
 
-    <!-- Second Section -->
-    <section class="sec2center">
-        <div class="n-margin">
-            <div class="row">
-                <h3 class="viajerotitle">VIAJEROS<br><br></h3>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <h2 class="sec2">Explora un lugar con la persona que mejor lo conoce.</h2>
-                    <h3 class="sec2 text">Nadie conoce mejor la ciudad que los que viven en ella. Por eso, en Manki te conectamos con gente local para que te ayude a vivir la ciudad en toda su dimensión.</h3>
-                    <a class="waves-effect btn-viajero" href="#viajero">QUIERO SER UN VIAJERO MANKI</a>
-                </div>
-                <div class="hidden-xs hidden-sm hidden-md col-lg-6 col-xl-6">
-                    <img src="img/world.png" alt="Quiero ser un viajero manki">
-                </div>
-            </div>
-        </div>
-    </section>
+		<div class="item-slide">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height explorer-bg"></div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text col--full-text--color display-table">
+					<div class="vertical-align">
+						<div class="col--full-text--width text-white">
+							<h2 class="h1 main-title">Explora un lugar con la persona que mejor lo conoce</h2>
+							<p class="main-subtitle">Nadie conoce mejor la ciudad que los que viven en ella. Por eso Manki te conecta con la gente local para que te ayude a vivir la ciudad en toda su dimensión</p>
+							<div class="btn--hover">
+								<a href="#SeUnViajero" class="btn-default btn-default--traveler--variant">
+									<span class="text-oswald-regular">Quiero ser un viajero manki</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Third Section -->
-    <section class="sec3center">
-        <div class="n-margin">
-            <div class="row">
-                <h3 class="guiatitle">GUÍAS<br><br></h3>
-                <div class="hidden-xs hidden-sm hidden-md col-lg-6 col-xl-6">
-                    <img src="img/hands.png" alt="Quiero ser un guia manki">
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <h2 class="sec3">Comparte tu talento y muestra lo mejor de tu ciudad.</h2>
-                    <h3 class="sec3 text">¿Tienes un talento que compartir? ¿Conoces lugares que crees que todos deberían visitar? Es tu oportunidad de mostrarlo y generar ingresos en el proceso.</h3>
-                    <a class="waves-effect btn-guia" href="guias.html">QUIERO SER UN GUÍA MANKI</a>
-                </div>
-            </div>
-        </div>
-    </section>
+		<!-- Third block -->
 
-    <!--Fourth Section-->
-    <div class="row">
-      <div class= "img-responsive-manki"></div>
-    </div>
+		<div class="item-slide">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height adventure-bg"></div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text col--full-text--variant display-table">
+					<div class="vertical-align">
+						<div class="col--full-text--width">
+							<h2 class="h1 main-title">Nuestro sueño</h2>
+							<p class="main-subtitle">Estamos redefiniendo el concepto de viajar. Buscamos que vivas experiencias únicas y auténticas desde una perspectiva local, que luego de tu viaje, tengas una historia que contar.</p>
+							<div class="btn--hover">
+								<a href="#SeUnViajero" class="btn-default btn-default--traveler">
+									<span class="text-oswald-regular">Quiero ser un viajero manki</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <section class="n-sec-4" id="viajero">
-        <div class="n-margin">
-            <div class="sec4center">
-                <h1 class="sec4">¡Sé un viajero Manki!</h1>
-                <h3 class="sec4 text">Nuestra comunidad esta creciendo y desarrollándose, y muy pronto lanzaremos la plataforma. Si quieres ser uno de los primeros en probarla, inscríbete aquí:</h3>
+		<!-- Full block -->
 
-                <form class="formanki traveler" action="https://formspree.io/hola@mankiapp.com" method="POST">
-                    <div class="row">
-                        <div class="input-group col-xs-8 col-xs-push-2 col-xs-pull-2 col-sm-8 col-sm-push-2 col-sm-pull-2 col-md-8 col-md-push-2 col-md-pull-2 col-lg-8 col-lg-push-2 col-lg-pull-2 col-xl-8 col-xl-push-2 col-xl-pull-2">
-                            <span class="glyphicon glyphicon-user input-group-addon" aria-hidden="true" style="color:#ff5638;"></span>
-                            <input type="text" class="form-control" aria-describedby="basic-addon1" name="name" placeholder="Nombre">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-group col-xs-8 col-xs-push-2 col-xs-pull-2 col-sm-8 col-sm-push-2 col-sm-pull-2 col-md-8 col-md-push-2 col-md-pull-2 col-lg-8 col-lg-push-2 col-lg-pull-2 col-xl-8 col-xl-push-2 col-xl-pull-2">
-                            <span class="glyphicon glyphicon-envelope input-group-addon" aria-hidden="true" style="color:#ff5638;"></span>
-                            <input type="email" class="form-control" aria-describedby="basic-addon1" name="_replyto" placeholder="ejemplo@test.com">
-                        </div>
-                    </div>
-                    <input type="submit" value="Enviar" class="waves-effect btn-enviar">
-                </form>
-            </div>
-        </div>
-    </section>
+		<div class="item-slide" id="SeUnViajero">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col--full-height col--full-block display-table text-center">
+					<div class="vertical-align">
+						<img src="img/world.png" alt="Sé un viajero Manki" class="image--width">
+						<h2 class="h1 main-title">¡Sé un viajero Manki!</h2>
+						<p class="text-subscribe">Nuestra comunidad está creciendo y desarrollándose, y muy pronto lanzaremos la plataforma. Si quieres ser uno de los primero en probarla, inscríbete aquí:</p>
+						<form class="formanki traveler" action="https://formspree.io/info@mankiapp.com" method="POST">
+		                    <div class="row">
+		                    	<div class="input">
+									<div class="clearbox"></div>
+									<i class="icon icon-user"></i>
+		                            <input type="text" class="form-control" aria-describedby="basic-addon1" name="name" placeholder="Nombre" />
+		                        </div>
+		                    </div>
+		                    <div class="row">
+		                    	<div class="input">
+									<i class="icon icon-email"></i>
+	                            	<input type="email" class="form-control" required aria-describedby="basic-addon1" name="_replyto" placeholder="ejemplo@test.com" />
+	                        	</div>
+		                    </div>
+		                    <div class="input--checkbox display-table">
+  								<input type="checkbox" name="terms-and-conditions" value="Acepto los términos y condiciones." />
+  								<span class="vertical-align">Acepto recibir información a través de correos de <h1 class="footer-h1">Manki</h1>.</span>
+		                    </div>
+		                    <div class="btn--hover">
+		                    	<a class="text-oswald-regular">
+		                    		<input type="submit" value="Inscribirme" class="btn-default btn-default--subscribe btn-default--traveler" />
+		                    	</a>
+		                    </div>
+		                </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!--Fifth/Footer Section-->
-    <section class="image-sec-3">
-        <div class="n-margin">
-            <div class="sec5">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <img class="logo-manki-main" src="img/logo.png" alt="Logo de Manki">
-                    <h1 class="sec5 two">En Manki queremos hacer del mundo un lugar más acogedor y cercano para los viajeros.</h1>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <h5 class="sec5">Si te gusta nuestra visión y estás interesado en nuestro proyecto, puedes seguirnos en redes sociales</h5>
-                    <br>
-                    <button class="facebook"></button> 
-                    <button class="medium"></button>
-                    <br>
-                    <h5 class="sec5">¿Te parece una idea interesate? En Manki estamos buscando gente que quiera apoyarnos.<br><br>Si te interesa invertir en nosotros o colaborar con el proyecto, déjanos tu e-mail y nos pondremos en contacto contigo</h5>
-                    <form class="formanki newsletter" action="https://formspree.io/hola@mankiapp.com" method="POST">
-                        <div class="row">
-                            <div class="input-group col-xs-8 col-xs-push-2 col-xs-pull-2 col-sm-8 col-sm-push-2 col-sm-pull-2 col-md-8 col-md-push-2 col-md-pull-2 col-lg-8 col-lg-push-2 col-lg-pull-2 col-xl-8 col-xl-push-2 col-xl-pull-2">
-                                <input type="email" class="form-control" aria-describedby="basic-addon1" name="_replyto_shareholder" placeholder="ejemplo@test.com">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="submit" style="background-color: #f3f3f3; border-style:none;">
-                                        <span class="glyphicon glyphicon-send" style="color:#ff5638;"></span>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-                    </form>
-                    <h6 class="sec5 three">o escríbenos a hola@mankiapp.com</h6>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- jQuery -->
+	<!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-	  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <!-- Block Scroll -->
+	<!-- <script src="js/blockScroll.js"></script> -->
+	<!-- Firebase -->
+  	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <script>
     // Initialize Firebase
     var config = {
@@ -200,7 +207,7 @@
     </script>    
     <script>
     $(function() {
-      $('a[href*="#viajero"]:not([href="#"])').click(function() {
+      $('a[href*="#SeUnViajero"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -213,38 +220,17 @@
         }
       });
     });
-    </script>
-    <script>
-      $(document).on("ready",function(){
-        $(".formanki.traveler").on('submit',function(e){
-          e.preventDefault();
-          var traveler = {
-            name :$("input[type='text']").val()
-            ,email:$("input[type='email']").val()
-          }
-					//get new key
-					var newTravelerKey = firebase.database().ref().child('traveler').push().key;
-					//new guide
-					var updates = {};
-					updates['/travelers/' + newTravelerKey] = traveler;
-					console.log(firebase.database().ref().update(updates)); 
-          alert('gracias por registrarte')         
-        });
-        $(".formanki.newsletter").on('submit',function(e){
-          e.preventDefault();
-          var newsLetter = {
-            email:$("input[name='_replyto_shareholder']").val()
-          }
-					//get new key
-					var newNewsLetterKey = firebase.database().ref().child('newsletter').push().key;
-					//new guide
-					var updates = {};
-					updates['/newsletters/' + newNewsLetterKey] = newsLetter;
-					console.log(firebase.database().ref().update(updates)); 
-          alert('gracias por suscribirte')         
-        })        
-      })
+
+    // $(function() {
+	   //  var blockScroller = $("#main-wrap").blockScroll();
+		  //   $("#main-wrap").blockScroll({scrollDuration:[0]});
+	   //  	$("#main-wrap").blockScroll({fadeBlocks:[false]});
+	   //  	$("#main-wrap").blockScroll({fadeDuration: [0]});
+
+ //    	// For controllers
+ //   //  	var blockScroller = $("#main-wrap").blockScroll();
+	// 		// blockScroller.goto([block #]);
+	// });
     </script>
 </body>
-
 </html>

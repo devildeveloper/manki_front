@@ -1,0 +1,442 @@
+/* General Styles */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100vh;
+	width: 100%;
+}
+
+body {
+	color: #4a4a4a;
+	margin: 0;
+	font-size: 16px;
+	font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+.col--full-height {
+	height: 36vh;
+	padding: 30px 0px;
+}
+
+.col--full-text {
+	padding-left: 59px;
+}
+
+.col--full-text--color {
+	background-color: #ff5628;
+}
+
+.col--full-text--color--variant {
+	background-color: #66d1bc;
+}
+
+.col--full-text--variant {
+	background-color: #f3f3f3;
+}
+
+.col--full-text--width {
+	width: 80%;
+}
+
+.item-slide--form {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.row--margin {
+	margin: 10px 0px;
+}
+
+/* Menu */
+
+.menu-nav {
+	margin-top: 8%;
+}
+
+.menu-nav a {
+	padding-left: 0;
+    padding-right: 0;
+}
+
+/* Main images */
+
+.traveler-bg {
+	padding: 0px;
+	background-image: url('../img/traveler.jpg');
+	background-position-y: top;
+	background-position-x: center;
+	background-size: cover;
+	padding-bottom: 49%;
+}
+
+.explorer-bg {
+	padding: 0px;
+	background-image: url('../img/explorer.jpg');
+	background-position-y: top;
+	background-position-x: center;
+	background-size: cover;
+	padding-bottom: 49%;
+}
+
+.adventure-bg {
+	padding: 0px;
+	background-image: url('../img/adventure.jpg');
+	background-position-y: top;
+	background-position-x: center;
+	background-size: cover;
+	padding-bottom: 49%;
+}
+
+.talent-bg {
+	padding: 0px;
+	background-image: url('../img/talent.jpg');
+	background-position-y: top;
+	background-position-x: center;
+	background-size: cover;
+	padding-bottom: 49%;
+	position: relative;
+}
+
+.friendship-bg {
+	padding: 0px;
+	background-image: url('../img/friendship.jpg');
+	background-position-y: top;
+	background-position-x: center;
+	background-size: cover;
+	padding-bottom: 49%;
+}
+
+.dream-bg {
+	padding: 0px;
+	background-image: url('../img/dream.jpg');
+	background-position-y: top;
+	background-position-x: center;
+	background-size: cover;
+	padding-bottom: 49%;
+}
+
+.inner-bg {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.2);
+	width: 100%;
+	height: 100%;
+}
+
+.logo-manki {
+	position: absolute;
+    width: 30%;
+    padding: 0;
+    height: 10vh;
+    left: 50%;
+}
+
+.image--width {
+	width: 84px;
+	height: 84px;
+}
+
+/* Title */
+
+.main-subtitle {
+	margin-top: 20px;
+	margin-bottom: 66px;
+}
+
+/* Text general */
+
+h1, .h1 {
+	font-size: 46px;
+	font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.0;
+}
+
+.index_guias h1, .h1 {
+	font-size: 36px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+	color: #fff;
+	outline: none;
+}
+
+a[href="#"] {
+	border-bottom: 5px solid #fff;
+}
+
+.text-subscribe {
+	width: 40%;
+	margin: 20px auto;
+}
+
+.text-white {
+	color: #fff;
+}
+
+/* Font text */
+
+.text-bold {
+	font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text-italic {
+	font-family: 'Source Sans Pro';
+	font-weight: 400;
+	font-style: italic;
+	font-stretch: normal;
+	font-size: 16px;
+}
+
+.text-oswald-regular {
+	font-family: 'oswaldregular';
+	font-size: 11px !important;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+/* Buttons */
+
+.btn-default {
+	font-family: 'oswaldregular';
+	font-size: 11px !important;
+	text-transform: uppercase;
+	padding: 10px;
+	margin-top: 56px;
+}
+
+.btn-default--traveler,
+.btn-default--traveler:hover,
+.btn-default--traveler:active,
+.btn-default--traveler:focus {
+	background-color: #ff5628;
+}
+
+.btn-default--traveler:hover {
+	box-shadow: 0 6px 55px 0 rgba(0,0,0, .3);
+}
+
+.btn-default--traveler,
+.btn--hover {
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.btn--hover:hover {
+	-moz-transform: scale(1.01);
+	-webkit-transform: scale(1.01);
+	-o-transform: scale(1.01);
+	-ms-transform: scale(1.01);
+	transform: scale(1.01);
+}
+
+.btn-default--traveler--variant,
+.btn-default--traveler--variant:hover,
+.btn-default--traveler--variant:active,
+.btn-default--traveler--variant:focus {
+	background-color: #66d1bc;
+}
+
+/* Form */
+
+.btn-default--subscribe,
+.btn-default--subscribe:active,
+.btn-default--subscribe:hover,
+.btn-default--subscribe:focus {
+	border: none;
+	color: #fff;
+	outline: none;
+	margin-top: 20px;
+}
+
+.input {
+	width: 40%;
+	margin: 0 auto 10px;
+	position: relative;
+}
+
+.input--guias {
+	margin: 0;
+	width: 100%;
+}
+
+.input--block-end {
+	margin: 10px 0px;
+}
+
+.input--checkbox {
+	font-size: 14px;
+	height: 20px;
+	margin: 0 auto;
+}
+
+.footer-h1 {
+	font-size: 14px;
+	font-weight: 400;
+	font-style: normal;
+	display: inline-block;
+	margin: 0px;
+}
+
+.form-control,
+.form-control:hover,
+.form-control:active,
+.form-control:focus {
+	background-color: #eee;
+	border: none;
+	outline: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding-left: 34px;
+}
+
+.form-control--guias {
+	height: 40px;
+	width: 100%;
+}
+
+.icon {
+	color: #ff5628;
+	width: 16.6px;
+	height: 16.6px;
+	position: absolute;
+    top: 8px;
+    left: 10px;
+    background-repeat: no-repeat;
+    background-position: center center
+}
+
+.icon-user {
+	background-image: url('../img/user_icon.png');
+}
+
+.icon-email {
+	background-image: url('../img/email_icon.png');
+}
+
+.icon-phone {
+	background-image: url('../img/phone_icon.png');
+}
+
+.icon-guias {
+	margin-top: 4px;
+}
+
+/* Fonts */
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../fonts/EOT/SourceSansPro-Regular.eot') format('embedded-opentype'),
+         url('../fonts/WOFF2/TTF/SourceSansPro-Regular.ttf.woff2') format('woff2'),
+         url('../fonts/WOFF/OTF/SourceSansPro-Regular.otf.woff') format('woff'),
+         url('../fonts/OTF/SourceSansPro-Regular.otf') format('opentype'),
+         url('../fonts/TTF/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('../fonts/EOT/SourceSansPro-It.eot') format('embedded-opentype'),
+         url('../fonts/WOFF2/TTF/SourceSansPro-It.ttf.woff2') format('woff2'),
+         url('../fonts/WOFF/OTF/SourceSansPro-It.otf.woff') format('woff'),
+         url('../fonts/OTF/SourceSansPro-It.otf') format('opentype'),
+         url('../fonts/TTF/SourceSansPro-It.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../fonts/EOT/SourceSansPro-Bold.eot') format('embedded-opentype'),
+         url('../fonts/WOFF2/TTF/SourceSansPro-Bold.ttf.woff2') format('woff2'),
+         url('../fonts/WOFF/OTF/SourceSansPro-Bold.otf.woff') format('woff'),
+         url('../fonts/OTF/SourceSansPro-Bold.otf') format('opentype'),
+         url('../fonts/TTF/SourceSansPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'oswaldregular';
+    src: url('../fonts/oswald-regular-webfont.eot');
+    src: url('../fonts/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald-regular-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-regular-webfont.woff') format('woff'),
+         url('../fonts/oswald-regular-webfont.ttf') format('truetype'),
+         url('../fonts/oswald-regular-webfont.svg#oswaldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Utils */
+
+.display-table {
+	display: table;
+}
+
+.vertical-align {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* Media query */
+
+@media (min-width: 768px) {
+	body {
+		font-size: 18px;
+	}
+
+	.btn-default {
+		font-size: 21px !important;
+	}
+
+	.col--full-height {
+		height: 100vh;
+	}
+
+	h1, .h1 {
+		font-size: 72px;
+	}
+
+	.menu-nav a {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.text-oswald-regular {
+		font-size: 21px !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.col--full-height {
+		height: 102vh;
+	}
+
+	.index_guias .col--full-height {
+		height: 108vh;
+	}
+
+	h1, .h1 {
+		font-size: 72px;
+	}
+}
