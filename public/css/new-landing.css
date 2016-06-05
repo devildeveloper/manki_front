@@ -286,11 +286,11 @@ a[href="#"] {
 }
 
 .footer-h1 {
-	font-size: 14px;
-	font-weight: 400;
-	font-style: normal;
-	display: inline-block;
-	margin: 0px;
+	font-size: 14px !important;
+	font-weight: 400 !important;
+	font-style: normal !important;
+	display: inline-block !important;
+	margin: 0px !important;
 }
 
 .form-control,
@@ -398,6 +398,10 @@ a[href="#"] {
 	vertical-align: middle;
 }
 
+.padding-left {
+	padding-left: 10px;
+}
+
 /* Media query */
 
 @media (min-width: 768px) {
@@ -410,7 +414,7 @@ a[href="#"] {
 	}
 
 	.col--full-height {
-		height: 100vh;
+		height: 100%;
 	}
 
 	h1, .h1 {
@@ -428,14 +432,6 @@ a[href="#"] {
 }
 
 @media (min-width: 992px) {
-	.col--full-height {
-		height: 102vh;
-	}
-
-	.index_guias .col--full-height {
-		height: 108vh;
-	}
-
 	h1, .h1 {
 		font-size: 72px;
 	}
