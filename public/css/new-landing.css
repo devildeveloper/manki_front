@@ -19,6 +19,10 @@ body {
     font-stretch: normal;
 }
 
+.container--btn--social {
+	width: 36%;
+}
+
 .col--full-height {
 	height: 36vh;
 	padding: 30px 0px;
@@ -144,8 +148,10 @@ body {
 /* Title */
 
 .main-subtitle {
+	font-size: 18px !important;
 	margin-top: 20px;
 	margin-bottom: 66px;
+	font-weight: 400 !important;
 }
 
 /* Text general */
@@ -182,6 +188,10 @@ a[href="#"] {
 
 .text-white {
 	color: #fff;
+}
+
+.mail-link {
+	color: #ff5628 !important;
 }
 
 /* Font text */
@@ -252,6 +262,18 @@ a[href="#"] {
 	background-color: #66d1bc;
 }
 
+.btn-transparent,
+.btn-transparent:hover,
+.btn-transparent:active,
+.btn-transparent:focus {
+	background-color: transparent;
+	border: 1px solid #ff5628;
+	border-radius: 5px;
+	color: #ff5628;
+	text-transform: none;
+	margin-top: 10px;
+}
+
 /* Form */
 
 .btn-default--subscribe,
@@ -309,6 +331,24 @@ a[href="#"] {
 	height: 40px;
 	width: 100%;
 }
+
+/* Redes */
+
+.facebook {
+	background: url('../img/icon-facebook.png') no-repeat center;
+	height: 83px;
+	width: 83px;
+	border: none;
+}
+
+.medium {
+  	background: url('../img/icon-medium.png') no-repeat center;
+  	height: 83px;
+  	width: 83px;
+  	border: none;
+}
+
+/* Icon */
 
 .icon {
 	color: #ff5628;
@@ -393,6 +433,10 @@ a[href="#"] {
 	display: table;
 }
 
+.inline-block {
+	display: inline-block;
+}
+
 .vertical-align {
 	display: table-cell;
 	vertical-align: middle;
@@ -400,6 +444,28 @@ a[href="#"] {
 
 .padding-left {
 	padding-left: 10px;
+}
+
+.margin-y-0 {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+.margin-y-md {
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+}
+
+.margin-auto {
+	margin: 0 auto;
+}
+
+.margin-t-0 {
+	margin-top: 0px !important;
+}
+
+.margin-b-md {
+	margin-bottom: 40px !important;
 }
 
 /* Media query */
