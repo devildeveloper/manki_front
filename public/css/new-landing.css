@@ -23,9 +23,29 @@ body {
 	width: 36%;
 }
 
+.container--btn--home {
+	margin: 18px;
+}
+
+.container--text {
+	height: 70vh;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.container--text--content {
+	position: relative;
+	z-index: 2;
+	color: #fff;
+}
+
 .col--full-height {
 	height: 36vh;
 	padding: 30px 0px;
+}
+
+.col--full-height--home {
+	height: 100vh;
 }
 
 .col--full-text {
@@ -63,12 +83,50 @@ body {
 	margin-top: 8%;
 }
 
+.menu-home-nav {
+	margin: 10% 3% 0;
+	position: relative;
+	z-index: 2;
+}
+
 .menu-nav a {
 	padding-left: 0;
     padding-right: 0;
 }
 
+/* Video */
+
+.embed-container {
+	/*height: 0;*/
+	padding-bottom: 55%; /* 49%; */
+	overflow: hidden;
+	position: relative;
+	height: 100vh;
+	top: 0%;
+}
+
+.embed-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+iframe {
+	display: none;
+}
+
 /* Main images */
+
+.home-bg {
+	padding: 0px;
+	background-image: url('../img/home.png');
+	background-position-y: top;
+	background-position-x: center;
+	background-size: cover;
+	padding-bottom: 49%;
+}
 
 .traveler-bg {
 	padding: 0px;
@@ -132,12 +190,44 @@ body {
 	height: 100%;
 }
 
+.inner-thanks-bg {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+}
+
+.inner-home-bg {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+}
+
+.thanksfull-bg {
+	padding: 0px;
+	background-image: url('../img/thanksfull.jpg');
+	background-position-y: top;
+	background-position-x: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .logo-manki {
 	position: absolute;
     width: 30%;
     padding: 0;
     height: 10vh;
     left: 50%;
+}
+
+.logo-manki-home {
+	position: absolute;
+    width: 30%;
+    padding: 0;
+    height: 10vh;
+	left: 10%;
 }
 
 .image--width {
@@ -272,6 +362,32 @@ a[href="#"] {
 	color: #ff5628;
 	text-transform: none;
 	margin-top: 10px;
+}
+
+.btn-radius,
+.btn-radius:hover,
+.btn-radius:active,
+.btn-radius:focus {
+	border-radius: 5px;
+	border-radius: 5px;
+    text-transform: none;
+    color: white;
+    padding: 2px 30px;
+}
+
+.btn--color,
+.btn--color:hover,
+.btn--color:active,
+.btn--color:focus {
+	background-color: #ff5628;
+	outline: none;
+}
+
+.btn--color--variant,
+.btn--color--variant:hover,
+.btn--color--variant:focus,
+.btn--color--variant:active {
+	background-color: #66d1bc;
 }
 
 /* Form */
@@ -429,6 +545,10 @@ a[href="#"] {
 
 /* Utils */
 
+.width-lg {
+	width: 80%;
+}
+
 .display-table {
 	display: table;
 }
@@ -440,6 +560,10 @@ a[href="#"] {
 .vertical-align {
 	display: table-cell;
 	vertical-align: middle;
+}
+
+.padding-0 {
+	padding: 0px;
 }
 
 .padding-left {
@@ -462,6 +586,10 @@ a[href="#"] {
 
 .margin-t-0 {
 	margin-top: 0px !important;
+}
+
+.margin-b-0 {
+	margin-bottom: 0px !important;
 }
 
 .margin-b-md {
@@ -492,13 +620,78 @@ a[href="#"] {
 		padding-right: 15px;
 	}
 
+	.menu-home-nav {
+		margin: 5% 3% 0;
+	}
+
 	.text-oswald-regular {
 		font-size: 21px !important;
+	}
+
+	iframe {
+		display: block;
 	}
 }
 
 @media (min-width: 992px) {
 	h1, .h1 {
 		font-size: 72px;
+	}
+}
+
+@media (min-width: 1190px) {
+	.logo-manki-home {
+		left: -6%;
+	}
+
+	.embed-container {
+		top: -16%;
+		padding-bottom: 62%;
+	}
+
+	.menu-home-nav {
+		margin: 10% 3% 0;
+	}
+}
+
+@media (min-width: 1225px) {
+	.embed-container {
+		padding-bottom: 61%;
+	}
+}
+
+@media (min-width: 1245px) {
+	.embed-container {
+		padding-bottom: 60%;
+	}
+}
+
+@media (min-width: 1265px) {
+	.embed-container {
+		padding-bottom: 59%;
+	}
+}
+
+@media (min-width: 1285px) {
+	.embed-container {
+		padding-bottom: 58%;
+	}
+}
+
+@media (min-width: 1305px) {
+	.embed-container {
+		padding-bottom: 57%;
+	}
+}
+
+@media (min-width: 1325px) {
+	.embed-container {
+		padding-bottom: 56%;
+	}
+}
+
+@media (min-width: 1345px) {
+	.embed-container {
+		padding-bottom: 55%;
 	}
 }

@@ -75,39 +75,40 @@
 </head>
 <body>
 	<div id="main-wrap">
-
-		<!-- Thanks block -->
-
-		<div class="item-slide">
+		<div class="item-slide item-slide--active">
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height display-table thanksfull-bg">
-                    <div class="inner-thanks-bg"></div>
-                    <div class="vertical-align">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-auto text-center">
-                            <img class="logo-manki-main" src="img/logo.png" alt="Logo de Manki">
-                        </div>
-                    </div>
-                </div>
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text col--full-text--variant display-table">
-					<div class="vertical-align">
-						<div class="col--full-text--width">
-							<h2 class="h1 main-title">Gracias por completar tus datos</h2>
-							<div class="main-subtitle inline-block margin-y-md">En <h1 class="main-subtitle margin-y-0 inline-block">Manki</h1> estamos trabajando constantemente para hacer del mundo un lugar más acogedor y cercano para todos los viajeros.</div>
-                            <p class="main-subtitle margin-y-md">Sigue en contacto con nosotros en nuestras redes sociales.</p>
-                            <div class="container--btn--social margin-auto">
-    							<div class="btn--hover inline-block">
-    								<a href="https://www.facebook.com/mankiapp/?fref=ts">
-    									<div class="facebook"></div>
-    								</a>
-                                </div>
-                                <div class="btn--hover inline-block">
-                                    <a href="https://medium.com/@Manki">
-                                        <div class="medium"></div>
-                                    </a>
-    							</div>
-                            </div>
-                            <p class="main-subtitle margin-t-0 margin-b-md">Si tienes alguna consulta o nos quieres ayudar de alguna forma puedes escribirnos a <a href="mailto:info@mankiapp.com" class="mail-link text-bold">info@mankiapp.com</a></p>
-                            <a href="home.html" class="btn-default btn-transparent"><i class="glyphicon glyphicon-arrow-left"></i> Volver al Inicio</a>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col--full-height col--full-height--home padding-0 text-center home-bg">
+					<div class="inner-home-bg"></div>
+					<div class="embed-container">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/unofO0UaE1o?autoplay=1&controls=0&rel=0&showinfo=0&autohide=1&loop=1&disablekb=1&playlist=unofO0UaE1o" frameborder="0" allowfullscreen></iframe>
+						<div class="row menu-home-nav">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<object data="img/logo-de-manki.svg" type="image/svg+xml" class="logo-manki-home"></object>
+							</div>
+							<div class="container--btn--home pull-right">
+								<div class="btn--hover inline-block">
+									<a href="viajeros.html" class="btn-default btn-radius btn--color">
+										Viajeros
+									</a>
+								</div>
+								<div class="btn--hover inline-block">
+									<a href="guias.html" class="btn-default btn-radius btn--color--variant">
+										Guias
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="container--text display-table">
+							<div class="container--text--content vertical-align">
+								<h1>Vive experiencias auténticas haciendo nuevos amigos.</h1>
+								<p>Manki conecta a viajeros con guías locales para que puedan disfrutar de experiencias inolvidables juntos.</p>
+							</div>
+						</div>
+						<div class="row container--text--content">
+							<p class="text-white margin-b-0">Contáctanos a</p>
+							<p>
+								<a href="mailto:info@mankiapp.com" class="mail-link text-bold">info@mankiapp.com</a>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -123,5 +124,42 @@
 	<!-- <script src="js/blockScroll.js"></script> -->
 	<!-- Firebase -->
   	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBnSM4GxKgMgvn6EzMcqsHahu6BD683ujQ",
+      authDomain: "manki-platform.firebaseapp.com",
+      databaseURL: "https://manki-platform.firebaseio.com",
+      storageBucket: "manki-platform.appspot.com",
+    };
+    firebase.initializeApp(config);
+    </script>    
+    <script>
+    $(function() {
+      $('a[href*="#SeUnViajero"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+
+    // $(function() {
+	   //  var blockScroller = $("#main-wrap").blockScroll();
+		  //   $("#main-wrap").blockScroll({scrollDuration:[0]});
+	   //  	$("#main-wrap").blockScroll({fadeBlocks:[false]});
+	   //  	$("#main-wrap").blockScroll({fadeDuration: [0]});
+
+ //    	// For controllers
+ //   //  	var blockScroller = $("#main-wrap").blockScroll();
+	// 		// blockScroller.goto([block #]);
+	// });
+    </script>
 </body>
 </html>
