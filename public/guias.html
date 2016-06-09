@@ -45,6 +45,9 @@
 	<!-- Bootstrap-->
     <link href="css/bootstrap.css" rel="stylesheet">
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    
     <!-- Custom CSS -->
     <link href="css/new-landing.css" rel="stylesheet">
 
@@ -74,14 +77,14 @@
     <!-- End Facebook Pixel Code -->
 </head>
 <body>
-	<div id="main-wrap" class="index_guias">
-		<div class="item-slide item-slide--active">
+	<div class="wrapper">
+		<div class="item item-slide-1">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height talent-bg">
 					<div class="inner-bg"></div>
 					<div class="row menu-nav">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-							<object data="img/logo-de-manki.svg" type="image/svg+xml" class="logo-manki"></object>
+							<object data="img/logo-de-manki.svg" type="image/svg+xml" class="logo-manki" alt="Logo de Manki"></object>
 						</div>
 						<a class="col-lg-2 col-md-3 col-sm-2 col-xs-3 text-center" href="viajeros.html">
 							<h1 class="text-oswald-regular">Viajeros</h1>
@@ -110,15 +113,15 @@
 
 		<!-- Second block -->
 
-		<div class="item-slide">
+		<div class="item item-slide-2">
 			<div class="row col--full-text--color--variant">
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height friendship-bg"></div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text display-table">
 					<div class="vertical-align">
 						<div class="col--full-text--width text-white">
 							<h2 class="h1 main-title">Gana amigos e ingresos extra</h2>
-							<p class="text-bold">Ser un guia local Manki en tu ciudad te permitirá conocer nuevas costumbres y culturas, ampliar tu visión del mundo.</p>
-							<p class="main-subtitle">Aseguramos que tendrás anécdotas inolvidables que contar, compartiendo actividades que disfrutas realizar.  Es tu oportunidad de ganar amigos, aprender de ellos y, en el proceso, tener ingresos extra.</p>
+							<p class="text-white text-bold">Ser un guia local Manki en tu ciudad te permitirá conocer nuevas costumbres y culturas, ampliar tu visión del mundo.</p>
+							<p class="text-white main-subtitle">Aseguramos que tendrás anécdotas inolvidables que contar, compartiendo actividades que disfrutas realizar.  Es tu oportunidad de ganar amigos, aprender de ellos y, en el proceso, tener ingresos extra.</p>
 							<div class="btn--hover">
 								<a href="#SeUnGuia" class="btn-default btn-default--traveler">
 									<span class="text-oswald-regular">Quiero ser un guia manki</span>
@@ -132,7 +135,7 @@
 
 		<!-- Third block -->
 
-		<div class="item-slide">
+		<div class="item item-slide-3">
 			<div class="row col--full-text--variant">
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height dream-bg"></div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text display-table">
@@ -154,13 +157,15 @@
 
 		<!-- Full block -->
 
-		<div class="item-slide item-slide--form" id="SeUnGuia">
+		<div class="item item-slide-4 item-slide--form" id="SeUnGuia">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col--full-height col--full-block display-table text-center">
 					<div class="vertical-align">
-						<img src="img/world.png" alt="Sé un guia Manki" class="image--width">
-						<h2 class="h1 main-title">¡Sé un guia Manki!</h2>
-						<p class="text-subscribe">Danos una iea de qué experiencia te gustaría guiar. Una vez hayamos revisado el formulario, te estaremos respondiendo con el próximo paso a seguir para ingresar a la familia Manki.</p>
+						<div class="row">
+							<img src="img/world.png" alt="Sé un guia Manki" class="image--width hidden-xs float-left">
+							<h2 class="h1 main-title main-title-guias col-lg-11">¡Sé un guia Manki!</h2>
+						</div>
+						<p class="text-subscribe">Danos una idea de qué experiencia te gustaría guiar. Una vez hayamos revisado el formulario, te estaremos respondiendo con el próximo paso a seguir para ingresar a la familia Manki.</p>
 						<div class="row row--margin">
 							<div class="col-sm-12 col-md-6">
 								<p class="text-bold text-left">
@@ -254,6 +259,8 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Block Scroll -->
 	<!-- <script src="js/blockScroll.js"></script> -->
+	<!-- Parallax Scroll -->
+	<script src="js/parallax.js"></script>
 	<!-- Firebase -->
   	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <script>

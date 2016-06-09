@@ -45,6 +45,9 @@
 	<!-- Bootstrap-->
     <link href="css/bootstrap.css" rel="stylesheet">
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    
     <!-- Custom CSS -->
     <link href="css/new-landing.css" rel="stylesheet">
 
@@ -74,13 +77,13 @@
     <!-- End Facebook Pixel Code -->
 </head>
 <body>
-	<div id="main-wrap">
-		<div class="item-slide item-slide--active">
+	<div class="wrapper">
+		<div class="item item-slide-1">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height padding-0 traveler-bg">
 					<div class="row menu-nav">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-							<object data="img/logo-de-manki.svg" type="image/svg+xml" class="logo-manki"></object>
+							<object data="img/logo-de-manki.svg" type="image/svg+xml" class="logo-manki" alt="Logo de Manki"></object>
 						</div>
 						<a class="col-lg-2 col-md-3 col-sm-2 col-xs-3 active text-center" href="#">
 							<h1 class="text-oswald-regular">Viajeros</h1>
@@ -108,14 +111,14 @@
 
 		<!-- Second block -->
 
-		<div class="item-slide">
-			<div class="row col--full-text--color">
+		<div class="item item-slide-2">
+			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height explorer-bg"></div>
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text display-table">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text col--full-text--color display-table">
 					<div class="vertical-align">
 						<div class="col--full-text--width text-white">
 							<h2 class="h1 main-title">Explora un lugar con la persona que mejor lo conoce</h2>
-							<p class="main-subtitle">Nadie conoce mejor la ciudad que los que viven en ella. Por eso Manki te conecta con la gente local para que te ayude a vivir la ciudad en toda su dimensión</p>
+							<p class="main-subtitle text-white">Nadie conoce mejor la ciudad que los que viven en ella. Por eso Manki te conecta con la gente local para que te ayude a vivir la ciudad en toda su dimensión</p>
 							<div class="btn--hover">
 								<a href="#SeUnViajero" class="btn-default btn-default--traveler--variant">
 									<span class="text-oswald-regular">Quiero ser un viajero manki</span>
@@ -129,9 +132,9 @@
 
 		<!-- Third block -->
 
-		<div class="item-slide">
-			<div class="row col--full-text--variant">
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height adventure-bg"></div>
+		<div class="item item-slide-3">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text--variant adventure-bg"></div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text display-table">
 					<div class="vertical-align">
 						<div class="col--full-text--width">
@@ -150,11 +153,11 @@
 
 		<!-- Full block -->
 
-		<div class="item-slide" id="SeUnViajero">
+		<div class="item item-slide-4" id="SeUnViajero">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col--full-height col--full-block display-table text-center">
 					<div class="vertical-align">
-						<img src="img/world.png" alt="Sé un viajero Manki" class="image--width">
+						<img src="img/world.png" alt="Sé un viajero Manki" class="image--width hidden-xs">
 						<h2 class="h1 main-title">¡Sé un viajero Manki!</h2>
 						<p class="text-subscribe">Nuestra comunidad está creciendo y desarrollándose, y muy pronto lanzaremos la plataforma. Si quieres ser uno de los primero en probarla, inscríbete aquí:</p>
 						<form class="formanki traveler" action="https://formspree.io/info@mankiapp.com" method="POST">
@@ -193,6 +196,8 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Block Scroll -->
 	<!-- <script src="js/blockScroll.js"></script> -->
+	<!-- Parallax Scroll -->
+	<script src="js/parallax.js"></script>
 	<!-- Firebase -->
   	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <script>
