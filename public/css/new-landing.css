@@ -243,6 +243,10 @@ video {
 	height: 84px;
 }
 
+.image-responsive {
+	width: 100%;
+}
+
 /* Title */
 
 .main-subtitle {
@@ -330,6 +334,14 @@ p {
 
 .guias .main-title {
 	font-size: 24px;
+}
+
+.thanksfull .visible-xs .main-subtitle {
+	font-size: 14px !important;
+}
+
+.thanksfull .visible-xs .main-title {
+	font-size: 34px !important;
 }
 
 /* Font text */
@@ -439,6 +451,14 @@ p {
 	margin-top: 10px;
 }
 
+.btn-transparent:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.thanksfull .hidden-sm .btn-transparent:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 .btn-radius,
 .btn-radius:hover,
 .btn-radius:active,
@@ -470,6 +490,10 @@ p {
 .btn--color--variant:focus,
 .btn--color--variant:active {
 	background-color: #66d1bc;
+}
+
+.btn-thanks-width {
+	width: 32%;
 }
 
 /* Form */
@@ -686,7 +710,31 @@ p {
 	float: left;
 }
 
+.position-r {
+	position: relative;
+}
+
+.padding-lg {
+	padding: 4% 2%;
+}
+
 /* Media query */
+
+@media (min-width: 480px) {
+	.padding-lg {
+		padding: 25% 2%;
+	}
+}
+
+@media (min-width: 640px) {
+	.padding-lg {
+		padding: 20% 2%;
+	}
+
+	.image-responsive {
+		width: 70%;
+	}
+}
 
 @media (min-width: 768px) {
 	body {
@@ -703,6 +751,14 @@ p {
 
 	h1.home-main-title {
 		font-size: 46px;
+	}
+
+	.thanksfull .visible-xs .main-subtitle {
+		font-size: 18px !important;
+	}
+
+	.thanksfull .visible-xs .main-title {
+		font-size: 72px !important;
 	}
 
 	.menu-nav a {
@@ -749,6 +805,22 @@ p {
 	.col-md {
 		float: none;
 		width: auto;
+	}
+
+	.image-responsive {
+		width: 60%;
+	}
+
+	.btn-thanks-width {
+		width: 22%;
+	}
+
+	.padding-lg {
+		padding: 10% 2%;
+	}
+
+	.thanksfull .hidden-sm .main-title {
+		font-size: 60px !important;
 	}
 }
 
