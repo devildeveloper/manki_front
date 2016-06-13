@@ -86,7 +86,7 @@
       next = $('.' + singleSlideClass + ':first'),
       previous = null,
       last = $('.' + settings.lastClass),
-      projectCount = $('.' + settings.fullSlideContainer).children().length,
+      projectCount = $('.' + settings.fullSlideContainer).children('.paneFirst').length,
       slideNumbers,
       top = true,
       upCount = 0,
@@ -723,3 +723,38 @@
     });
   };
 })(jQuery);
+
+$(document).ready(function() {
+
+  var windowWidth = $(window).width();
+
+  if (windowWidth < 992) {
+    $('.col-repeat').hide();
+    $('.paneLast').show();
+    $('.paneLast').addClass('paneFirst');
+  }
+
+  else {
+    $('.col-repeat').show();
+    $('.paneLast').hide();
+    $('.paneLast').removeClass('paneFirst');
+  }
+});
+
+$(window).resize(function() {
+
+  var windowWidth = $(window).width();
+
+  if (windowWidth < 992) {
+    $('.col-repeat').hide();
+    $('.paneLast').show();
+    $('.paneLast').addClass('paneFirst');
+
+  }
+
+  else {
+    $('.col-repeat').show();
+    $('.paneLast').hide();
+    $('.paneLast').removeClass('paneFirst');
+  }
+});
