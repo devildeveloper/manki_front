@@ -723,38 +723,3 @@
     });
   };
 })(jQuery);
-
-// $(document).ready(function() {
-
-//   var windowWidth = $(window).width();
-
-//   if (windowWidth < 992) {
-//     $('.col-repeat').hide();
-//     $('.paneLast').show();
-//     $('.paneLast').addClass('paneFirst');
-//   }
-
-//   else {
-//     $('.col-repeat').show();
-//     $('.paneLast').hide();
-//     $('.paneLast').removeClass('paneFirst');
-//   }
-// });
-
-// $(window).resize(function() {
-
-//   var windowWidth = $(window).width();
-
-//   if (windowWidth < 992) {
-//     $('.col-repeat').hide();
-//     $('.paneLast').show();
-//     $('.paneLast').addClass('paneFirst');
-
-//   }
-
-//   else {
-//     $('.col-repeat').show();
-//     $('.paneLast').hide();
-//     $('.paneLast').removeClass('paneFirst');
-//   }
-// });
