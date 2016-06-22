@@ -19,12 +19,6 @@ body {
     font-stretch: normal;
 }
 
-.item {
-	/*height: 100%;*/
-	width: 100%;
-	position: relative;
-}
-
 .container--btn--social {
 	width: 120px;
 }
@@ -48,15 +42,20 @@ body {
 }
 
 .col--full-height {
+	height: 60%;
+}
+
+.col--full-height--last {
 	height: 100%;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	display: table;
+	text-align: center;
 }
 
 .col--full-height--home {
 	height: 100%;
-}
-
-.col--full-text {
-	padding-left: 59px;
 }
 
 .col--full-text--color {
@@ -73,6 +72,17 @@ body {
 
 .col--full-text--width {
 	width: 80%;
+	margin: 0 auto;
+}
+
+.col--full-text--height {
+	height: 80%;
+	padding-bottom: 30px;
+}
+
+.col--full-text--responsive {
+	margin: 0 auto;
+	text-align: center;
 }
 
 .item-slide--form {
@@ -81,7 +91,7 @@ body {
 }
 
 .row--margin {
-	margin: 10px 0px;
+	margin: 10px 0px 32px;
 }
 
 /* Menu */
@@ -90,6 +100,16 @@ body {
 	margin-top: 8%;
 	position: relative;
 	z-index: 1;
+}
+
+.menu-nav__item {
+	margin-top: 13px;
+	max-width: 100px;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'oswaldregular';
+	text-transform: uppercase;
+	color: #fff;
 }
 
 .menu-home-nav {
@@ -139,7 +159,7 @@ video {
 
 .traveler-bg {
 	padding: 0px;
-	background-image: url('../img/traveler.jpg');
+	background-image: url('../img/traveler.jpeg');
 	background-position-y: top;
 	background-position-x: center;
 	background-size: cover;
@@ -155,7 +175,7 @@ video {
 
 .adventure-bg {
 	padding: 0px;
-	background-image: url('../img/adventure.jpg');
+	background-image: url('../img/adventure.jpeg');
 	background-position-y: top;
 	background-position-x: center;
 	background-size: cover;
@@ -223,7 +243,8 @@ video {
     padding: 0;
     height: 10vh;
     left: 50%;
-    top: -5px; /*-13px;*/
+    top: -8px; /*-13px;*/
+    max-width: 60px;
 }
 
 .logo-manki-home {
@@ -249,22 +270,27 @@ video {
 
 /* Title */
 
+.main-title {
+	font-size: 24px;
+	max-width: 500px;
+	line-height: 0.9;
+}
+
+.main-title--footer {
+	margin: 0 auto;
+	font-size: 24px;
+	line-height: 0.9;
+}
+
 .main-subtitle {
 	font-size: 18px !important;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	font-weight: 400 !important;
-}
-
-.main-title-guias {
-	margin: 0px;
-	float: left;
-}
-
-.main-title--footer {
-	margin-left: auto;
-    margin-right: auto;
-    float: none;
+	line-height: 1.2;
+	max-width: 500px;
+	margin-top: 8px;
+	color: #000;
 }
 
 /* Text general */
@@ -320,8 +346,7 @@ p {
 }
 
 .text-subscribe {
-	width: 40%;
-	margin: 20px auto;
+	margin: 0px auto 40px;
 }
 
 .text-white {
@@ -330,10 +355,6 @@ p {
 
 .mail-link {
 	color: #ff5628 !important;
-}
-
-.guias .main-title {
-	font-size: 24px;
 }
 
 .thanksfull .visible-xs .main-subtitle {
@@ -348,7 +369,7 @@ p {
 
 .text-bold {
 	font-family: 'Source Sans Pro';
-    font-weight: 700;
+    font-weight: 700 !important;
     font-style: normal;
 }
 
@@ -375,6 +396,7 @@ p {
 	text-transform: uppercase;
 	padding: 10px;
 	margin-top: 56px;
+	display: inline-block;
 }
 
 .btn--facebook,
@@ -470,7 +492,6 @@ p {
     width: 30%;
     margin: 0 5px;
     min-height: 20px;
-    line-height: 2;
     cursor: pointer;
     text-align: center;
     padding: 0px;
@@ -496,6 +517,10 @@ p {
 	width: 32%;
 }
 
+.width-button {
+	width: 54%;
+}
+
 /* Form */
 
 .btn-default--subscribe,
@@ -505,7 +530,8 @@ p {
 	border: none;
 	color: #fff;
 	outline: none;
-	margin-top: 20px;
+	margin-top: 10px;
+	padding: 8px 40px;
 }
 
 .input {
@@ -526,7 +552,9 @@ p {
 .input--checkbox {
 	font-size: 14px;
 	height: 20px;
-	margin: 0 auto;
+	margin: 20px auto;
+	display: table;
+	padding: 24px 24px 0px;
 }
 
 .footer-h1 {
@@ -672,6 +700,10 @@ p {
 	padding-left: 10px;
 }
 
+.padding-left-none--md {
+	padding-left: 15px;
+}
+
 .margin-y-0 {
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
@@ -787,11 +819,11 @@ p {
 	}
 
 	.text-lg {
-		font-size: 24px;
+		font-size: 18px;
 	}
 
 	.logo-manki {
-		top: 0;
+		top: -12px;
 	}
 
 	.input-checkbox-xs {
@@ -822,6 +854,10 @@ p {
 	.thanksfull .hidden-sm .main-title {
 		font-size: 60px !important;
 	}
+
+	.width-button {
+		width: 25%;
+	}
 }
 
 @media (min-width: 992px) {
@@ -829,11 +865,7 @@ p {
 	.btn-radius:hover,
 	.btn-radius:focus,
 	.btn-radius:active {
-		width: 10%;
-	}
-
-	.logo-manki {
-		top: -12px;
+		width: 13%;
 	}
 
 	.guias p.main-subtitle {
@@ -842,6 +874,27 @@ p {
 
 	.text-responsive {
 		font-size: 16px;
+		margin-bottom: 30px;
+	}
+
+	.col--full-height {
+		height: 100%;
+	}
+
+	.col--full-text--height {
+		height: 100%;
+	}
+
+	.menu-nav__item {
+		margin-top: 13px;
+	}
+
+	.width-button {
+		width: 20%;
+	}
+
+	.padding-left-none--md {
+		padding-left: 0px;
 	}
 }
 
@@ -850,16 +903,12 @@ p {
 		left: -6%;
 	}
 
-	.logo-manki {
-		top: auto;
-	}
-
 	.main-subtitle {
-		margin-bottom: 66px;
+		margin-bottom: 56px;
 	}
 
 	.text-responsive {
-		font-size: 24px;
+		font-size: 18px;
 	}
 
 	.guias .main-title {
