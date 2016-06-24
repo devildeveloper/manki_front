@@ -285,14 +285,51 @@
 	<script>
 		(function($) {
 			$(document).ready(function() {
-			    $(document).alton({
-			        fullSlideContainer: 'pane-container',
-			        singleSlideClass: 'pane',
-			        useSlideNumbers: true,
-			        slideNumbersBorderColor: 'rgba(0, 0, 0, 0.1)',
-			        slideNumbersColor: '#66d1bc',
-			        bodyContainer: 'pageWrapper',
-			    });
+			    if ($(window).width() > 992) {
+				    $(document).alton({
+				        fullSlideContainer: 'pane-container',
+				        singleSlideClass: 'pane',
+				        useSlideNumbers: true,
+				        slideNumbersBorderColor: 'rgba(0, 0, 0, 0.1)',
+				        slideNumbersColor: '#66d1bc',
+				        bodyContainer: 'pageWrapper',
+				    });
+		    	} else {
+		    		$(document).alton({
+				        fullSlideContainer: 'full',
+				        singleSlideClass: 'slide',
+				        useSlideNumbers: false,
+				        slideNumbersBorderColor: 'transparent',
+				        slideNumbersColor: 'transparent',
+				        bodyContainer: 'bodyContainer',
+				    });
+		    	}
+			});
+
+			$(window).resize(function() {
+				if ($(window).width() > 991 && $(window).width() > 993) {
+				    $(document).alton({
+				        useSlideNumbers: true,
+				    });
+				}
+				if ($(window).width() > 991) {
+				    $(document).alton({
+				        fullSlideContainer: 'pane-container',
+				        singleSlideClass: 'pane',
+				        slideNumbersBorderColor: 'rgba(0, 0, 0, 0.1)',
+				        slideNumbersColor: '#66d1bc',
+				        bodyContainer: 'pageWrapper',
+				    });
+		    	} else {
+		    		$(document).alton({
+				        fullSlideContainer: 'full',
+				        singleSlideClass: 'slide',
+				        useSlideNumbers: false,
+				        slideNumbersBorderColor: 'transparent',
+				        slideNumbersColor: 'transparent',
+				        bodyContainer: 'bodyContainer',
+				    });
+		    	}
 			});
 		})(jQuery);
 	</script>

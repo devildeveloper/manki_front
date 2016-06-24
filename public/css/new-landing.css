@@ -519,6 +519,7 @@ p {
 
 .width-button {
 	width: 54%;
+	margin-top: -30px !important;
 }
 
 /* Form */
