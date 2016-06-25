@@ -97,9 +97,13 @@ body {
 /* Menu */
 
 .menu-nav {
-	margin-top: 8%;
-	position: relative;
-	z-index: 1;
+	margin-top: 0%;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    height: 65px;
+    padding-top: 10px;
 }
 
 .menu-nav__item {
@@ -192,7 +196,7 @@ video {
 
 .friendship-bg {
 	padding: 0px;
-	background-image: url('../img/friendship.png');
+	background-image: url('../img/friendship.jpg');
 	background-position-y: top;
 	background-position-x: center;
 	background-size: cover;
@@ -494,7 +498,7 @@ p {
     min-height: 20px;
     cursor: pointer;
     text-align: center;
-    padding: 0px;
+    padding: 10px 0px;
     font-size: 14px !important;
 }
 
@@ -753,6 +757,15 @@ p {
 
 /* Media query */
 
+@media (min-width: 320px) {
+	.btn-radius,
+	.btn-radius:hover,
+	.btn-radius:focus,
+	.btn-radius:active {
+		width: 38%;
+	}
+}
+
 @media (min-width: 480px) {
 	.padding-lg {
 		padding: 25% 2%;
@@ -811,7 +824,7 @@ p {
 	.btn-radius:hover,
 	.btn-radius:focus,
 	.btn-radius:active {
-		width: 12%;
+		width: 20%;
 		font-size: inherit !important;
 	}
 
@@ -866,7 +879,7 @@ p {
 	.btn-radius:hover,
 	.btn-radius:focus,
 	.btn-radius:active {
-		width: 13%;
+		width: 18%;
 	}
 
 	.guias p.main-subtitle {
@@ -897,9 +910,17 @@ p {
 	.padding-left-none--md {
 		padding-left: 0px;
 	}
+
+	.menu-nav {
+		margin-top: 4%;
+	    position: fixed;
+	    z-index: 1;
+	    width: 50%;
+	    background: transparent;
+	}
 }
 
-@media (min-width: 1190px) {
+@media (min-width: 1200px) {
 	.logo-manki-home {
 		left: -6%;
 	}
@@ -915,5 +936,12 @@ p {
 	.guias .main-title {
 		margin-top: 20px;
 		margin-bottom: 0px;
+	}
+
+	.btn-radius,
+	.btn-radius:hover,
+	.btn-radius:focus,
+	.btn-radius:active {
+		width: 13%;
 	}
 }

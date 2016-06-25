@@ -91,11 +91,11 @@
 									<a class="col-lg-2 col-md-3 col-sm-2 col-xs-3 menu-nav__item active" href="#">Ofrece</a>
 								</div>
 							</div>
-							<div class="col-lg-6 col-md-6 col--full-text--height col--full-text display-table">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-text--height col--full-text display-table">
 								<div class="vertical-align">
 									<div class="col--full-text--width">
 										<h2 class="h1 main-title">Comparte lo mejor de ti</h2>
-										<p class="main-subtitle">Podrás compartir aquellas actividades que te apasionan, tus hobbies, talentos o pasatiempos de acuerdo con tu disponibilidad y tus preferencias.</p>
+										<p class="main-subtitle">Crea una experiencia, desde pasear en bicicleta por el malecón, realizar un tour de bares, o preparar tu platillo favorito. Las posibilidades de compartir tu talento y pasión, son infinitas.</p>
 										<div class="btn--hover">
 											<a href="#OfreceUnaExperiencia" class="btn-default btn-default--traveler--variant">
 												<span class="text-oswald-regular hidden-xs hidden-sm">Quiero ofrecer una experiencia en manki</span>
@@ -113,11 +113,13 @@
 				<div class="content-container">
 					<div class="wrapper">
 						<div class="row col--full-text--color--variant">
-							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height friendship-bg"></div>
-							<div class="col-lg-6 col-md-6 col--full-height col--full-text display-table">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height friendship-bg">
+								<div class="inner-bg"></div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text display-table">
 								<div class="vertical-align">
 									<div class="col--full-text--width text-white">
-										<h2 class="h1 main-title">Haz nuevos amigos</h2>
+										<h2 class="h1 main-title">Vive de tu pasión</h2>
 										<p class="text-white main-subtitle">Tendrás anécdotas inolvidables que contar compartiendo actividades que disfrutas realizar. Es tu oportunidad de hacer amigos, compartir lo mejor de ti, y en el proceso, obtener ingresos.</p>
 										<div class="btn--hover">
 											<a href="#OfreceUnaExperiencia" class="btn-default btn-default--traveler">
@@ -136,12 +138,14 @@
 				<div class="content-container">
 					<div class="wrapper">
 						<div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text--variant dream-bg"></div>
-							<div class="col-lg-6 col-md-6 col--full-text--height col--full-text display-table">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text--variant dream-bg">
+								<div class="inner-bg"></div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-text--height col--full-text display-table">
 								<div class="vertical-align">
 									<div class="col--full-text--width">
 										<h2 class="h1 main-title">Nuestro sueño</h2>
-										<p class="main-subtitle">Buscamos crear una comunidad de emprendedores, que hagan del mundo un lugar más acogedor y cercano a través de experiencias únicas y auténticas.</p>
+										<p class="main-subtitle">Buscamos crear una comunidad de emprendedores que haga del mundo un lugar más acogedor y cercano a través de su pasión y talento compartiendo experiencias únicas y auténticas en la ciudad.</p>
 										<div class="btn--hover">
 											<a href="#OfreceUnaExperiencia" class="btn-default btn-default--traveler--variant">
 												<span class="text-oswald-regular hidden-xs hidden-sm">Quiero ofrecer una experiencia en manki</span>
@@ -280,6 +284,19 @@
         }
       });
     });
+    </script>
+
+    <script>
+    	$(function() {
+    		$(document).scroll(function() {
+		    	if ($(window).scrollTop() > 2000) {
+		          console.log($(window).scrollTop());
+		          $('.menu-nav').css('display', 'none');
+		        } else {
+		          $('.menu-nav').css('display', 'block');
+		        }
+		    });
+    	});
     </script>
 
 	<script>

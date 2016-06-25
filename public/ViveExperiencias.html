@@ -92,12 +92,11 @@
 										<a class="col-lg-2 col-md-3 col-sm-2 col-xs-3 menu-nav__item" href="OfreceExperiencias.html">Ofrece</a>
 									</div>
 								</div>
-								<div class="col-lg-6 col-md-6 col--full-text col--full-text--height display-table">
+								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-text col--full-text--height display-table">
 									<div class="vertical-align">
 										<div class="col--full-text--width">
 											<h2 class="h1 main-title">Redescubre tu ciudad</h2>
-											<p class="main-subtitle text-bold margin-b-0">Para conocer nuevos lugares no hace falta viajar mucho</p>
-											<p class="main-subtitle">Imagina conocer un lugar completamente nuevo para ti… a menos de 50 kilómetros de donde estás. Con Manki puedes conectar con personas talentosas que te enseñarán los mejores lugares de la ciudad en la que vives.</p>
+											<p class="main-subtitle">Imagina conocer un lugar complemente nuevo para ti en tu ciudad. Manki te permite  redescubrir tu ciudad de la mano de personas que tienen pasiones y pasatiempos por compartir.</p>
 											<div class="btn--hover">
 												<a href="#ViveUnaExperiencia" class="btn-default btn-default--traveler">
 													<span class="text-oswald-regular hidden-xs hidden-sm">Quiero vivir experiencias con manki</span>
@@ -116,13 +115,13 @@
 						<div class="wrapper">
 							<div class="row">
 								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height explorer-bg">
+									<div class="inner-bg"></div>
 								</div>
-								<div class="col-lg-6 col-md-6 col--full-text--height col--full-text col--full-text--color display-table">
+								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-text--height col--full-text col--full-text--color display-table">
 									<div class="vertical-align">
 										<div class="col--full-text--width text-white">
 											<h2 class="h1 main-title">Vive experiencias nuevas e increíbles</h2>
-											<p class="main-subtitle text-white text-bold margin-b-0">¿Cuál es tu plan para este fin de semana? Si tu respuesta es “Ir al centro comercial” tenemos una mejor propuesta para ti</p>
-											<p class="main-subtitle text-white">Tu ciudad es más que los shoppings o las plazas que todos conocen. ¿Qué tal descubrir un nuevo lugar o vivir una nueva aventura? ¿Qué tal tener una historia nueva que contar cada lunes en el trabajo? Manki se encarga de darte la experiencia, tú encárgate de disfrutarla (¡y atribuirte su descubrimiento para jactarte con tus amigos!)</p>
+											<p class="main-subtitle text-white">¿Qué tal vivir una nueva experiencia, una nueva aventura?, ¿Qué tal tener siempre una nueva historia que contar?. Manki se encarga de darte la experiencia, tú encárgate de disfrutarla.</p>
 											<div class="btn--hover">
 												<a href="#ViveUnaExperiencia" class="btn-default btn-default--traveler--variant">
 													<span class="text-oswald-regular hidden-xs hidden-sm">Quiero vivir experiencias con manki</span>
@@ -140,13 +139,14 @@
 					<div class="content-container">
 						<div class="wrapper">
 							<div class="row">
-								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text--variant adventure-bg"></div>
-								<div class="col-lg-6 col-md-6 col--full-text--height col--full-text display-table">
+								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-height col--full-text--variant adventure-bg">
+									<div class="inner-bg"></div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col--full-text--height col--full-text display-table">
 									<div class="vertical-align">
 										<div class="col--full-text--width">
-											<h2 class="h1 main-title">Nuestro sueño: Revalorar tu ciudad</h2>
-											<p class="main-subtitle text-bold margin-b-0">En Manki buscamos hacer del mundo un lugar más acogedor y cercano para todos.</p>
-											<p class="main-subtitle">Conocer tu localidad es el primer paso para quererla y valorarla; y una comunidad que valora su ciudad es un poderoso agente de cambio.</p>
+											<h2 class="h1 main-title">Nuestro sueño</h2>
+											<p class="main-subtitle">Buscamos hacer del mundo un lugar más acogedor y cercano para todos, a través de experiencias únicas y auténticas en la ciudad, conectando a las personas para que tengan historias que contar.</p>
 											<div class="btn--hover">
 												<a href="#ViveUnaExperiencia" class="btn-default btn-default--traveler">
 													<span class="text-oswald-regular hidden-xs hidden-sm">Quiero vivir experiencias con manki</span>
@@ -239,89 +239,70 @@
     });
     </script>
 
+    <script>
+    	$(function() {
+    		$(document).scroll(function() {
+		    	if ($(window).scrollTop() > 1938) {
+		          console.log($(window).scrollTop());
+		          $('.menu-nav').css('display', 'none');
+		        } else {
+		          $('.menu-nav').css('display', 'block');
+		        }
+		    });
+    	});
+    </script>
+
 	<script>
 		(function($) {
 			$(document).ready(function() {
-			    $(document).alton({
-			        fullSlideContainer: 'pane-container',
-			        singleSlideClass: 'pane',
-			        useSlideNumbers: true,
-			        slideNumbersBorderColor: 'rgba(0, 0, 0, 0.1)',
-			        slideNumbersColor: '#66d1bc',
-			        bodyContainer: 'pageWrapper',
-			    });
-				// var width = $(window).width();
-				// if(width >= 992) {
-				// 	$(document).alton({
-				// 		fullSlideContainer: 'pane-container',
-				// 		singleSlideClass: 'pane',
-				// 		useSlideNumbers: true,
-				// 		slideNumbersBorderColor: 'rgba(0, 0, 0, 0.1)',
-				// 		slideNumbersColor: '#ff5628',
-				// 		bodyContainer: 'pageWrapper',
-				// 	});
-				// } else {
-				// 	$(document).alton({
-				// 		fullSlideContainer: 'full',
-				// 		singleSlideClass: 'slide',
-				// 		useSlideNumbers: false,
-				// 		slideNumbersBorderColor: 'transparent',
-				// 		slideNumbersColor: 'transparent',
-				// 		bodyContainer: 'wrapper',
-				// 	});
-				// }
+			    if ($(window).width() > 992) {
+				    $(document).alton({
+				        fullSlideContainer: 'pane-container',
+				        singleSlideClass: 'pane',
+				        useSlideNumbers: true,
+				        slideNumbersBorderColor: 'rgba(0, 0, 0, 0.1)',
+				        slideNumbersColor: '#ff5628',
+				        bodyContainer: 'pageWrapper',
+				    });
+		    	} else {
+		    		$(document).alton({
+				        fullSlideContainer: 'full',
+				        singleSlideClass: 'slide',
+				        useSlideNumbers: false,
+				        slideNumbersBorderColor: 'transparent',
+				        slideNumbersColor: 'transparent',
+				        bodyContainer: 'bodyContainer',
+				    });
+		    	}
+			});
 
-				// $(window).resize(function() {
-				// 	var width = $(window).width();
-				// 	if(width >= 992) {
-				// 		$(document).alton({
-				// 			fullSlideContainer: 'pane-container',
-				// 			singleSlideClass: 'pane',
-				// 			useSlideNumbers: true,
-				// 			slideNumbersBorderColor: 'rgba(0, 0, 0, 0.1)',
-				// 			slideNumbersColor: '#ff5628',
-				// 			bodyContainer: 'pageWrapper',
-				// 		});
-				// 	} else {
-				// 		$(document).alton({
-				// 			fullSlideContainer: 'full',
-				// 			singleSlideClass: 'slide',
-				// 			useSlideNumbers: false,
-				// 			slideNumbersBorderColor: 'transparent',
-				// 			slideNumbersColor: 'transparent',
-				// 			bodyContainer: 'wrapper',
-				// 		});
-				// 	}
-				// });
+			$(window).resize(function() {
+				if ($(window).width() > 991 && $(window).width() > 993) {
+				    $(document).alton({
+				        useSlideNumbers: true,
+				    });
+				}
+				if ($(window).width() > 991) {
+				    $(document).alton({
+				        fullSlideContainer: 'pane-container',
+				        singleSlideClass: 'pane',
+				        slideNumbersBorderColor: 'rgba(0, 0, 0, 0.1)',
+				        slideNumbersColor: '#ff5628',
+				        bodyContainer: 'pageWrapper',
+				    });
+		    	} else {
+		    		$(document).alton({
+				        fullSlideContainer: 'full',
+				        singleSlideClass: 'slide',
+				        useSlideNumbers: false,
+				        slideNumbersBorderColor: 'transparent',
+				        slideNumbersColor: 'transparent',
+				        bodyContainer: 'bodyContainer',
+				    });
+		    	}
 			});
 		})(jQuery);
 	</script>
-	<!-- <script type="text/javascript">
-		$(document).ready(function() {
-			var width = $(window).width();
-			if(width == 992) {
-				// Recargo la página
-				location.reload();
-			}
-			if(width == 991) {
-				// Recargo la página
-				location.reload();
-			}
-
-
-			$(window).resize(function() {
-				var width = $(window).width();
-				if(width == 992) {
-					// Recargo la página
-					location.reload();
-				}
-				if(width == 991) {
-					// Recargo la página
-					location.reload();
-				}
-			});
-		});
-	</script> -->
 
 	</body>
 </html>
