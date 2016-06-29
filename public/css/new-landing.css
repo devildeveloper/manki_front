@@ -45,6 +45,10 @@ body {
 	height: 60%;
 }
 
+.col--full-height--thanks {
+	height: 100%;
+}
+
 .col--full-height--last {
 	height: 100%;
 	width: 100%;
@@ -136,7 +140,7 @@ body {
 	height: 100vh;
 }
 
-.embed-container video {
+.embed-container iframe {
 	background-size: cover;
     bottom: 0;
     height: auto;
@@ -147,7 +151,7 @@ body {
     width: auto;
 }
 
-video {
+iframe {
 	display: none;
 }
 
@@ -309,7 +313,7 @@ h1, .h1 {
 }
 
 h1.home-main-title {
-	font-size: 40px;
+	font-size: 36px !important;
 }
 
 .index_guias h1, .h1 {
@@ -475,6 +479,8 @@ p {
 	color: #ff5628;
 	text-transform: none;
 	margin-top: 10px;
+	width: 100%;
+    text-align: center;
 }
 
 .btn-transparent:hover {
@@ -518,7 +524,7 @@ p {
 }
 
 .btn-thanks-width {
-	width: 32%;
+	width: 36%;
 }
 
 .width-button {
@@ -541,8 +547,10 @@ p {
 
 .input {
 	width: auto;
-	margin: 0 auto 10px;
+	margin: 0 auto 30px !important;
 	position: relative;
+	padding-left: 15px;
+    padding-right: 15px;
 }
 
 .input--guias {
@@ -557,9 +565,11 @@ p {
 .input--checkbox {
 	font-size: 14px;
 	height: 20px;
-	margin: 20px auto;
+	margin: 20px auto 30px;
 	display: table;
-	padding: 24px 24px 0px;
+	padding: 0px 24px;
+	width: auto !important;
+	position: relative;
 }
 
 .footer-h1 {
@@ -611,9 +621,13 @@ p {
 	height: 16.6px;
 	position: absolute;
     top: 8px;
-    left: 10px;
+    left: 24px;
     background-repeat: no-repeat;
     background-position: center center
+}
+
+.icon--left {
+	left: 8px;
 }
 
 .icon-user {
@@ -709,6 +723,11 @@ p {
 	padding-left: 15px;
 }
 
+.padding-sm--none {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 .margin-y-0 {
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
@@ -752,7 +771,11 @@ p {
 }
 
 .padding-lg {
-	padding: 4% 2%;
+	padding: 4% 0%;
+}
+
+.vertical-align--top {
+	vertical-align: top;
 }
 
 /* Media query */
@@ -796,7 +819,7 @@ p {
 	}
 
 	h1.home-main-title {
-		font-size: 46px;
+		font-size: 46px !important;
 	}
 
 	.thanksfull .visible-xs .main-subtitle {
@@ -816,7 +839,7 @@ p {
 		font-size: 21px !important;
 	}
 
-	video {
+	iframe {
 		display: block;
 	}
 
@@ -837,7 +860,7 @@ p {
 	}
 
 	.logo-manki {
-		top: -12px;
+		top: -28px;
 	}
 
 	.input-checkbox-xs {
@@ -858,11 +881,11 @@ p {
 	}
 
 	.btn-thanks-width {
-		width: 22%;
+		width: 24%;
 	}
 
 	.padding-lg {
-		padding: 10% 2%;
+		padding: 8% 2%;
 	}
 
 	.thanksfull .hidden-sm .main-title {
@@ -918,6 +941,17 @@ p {
 	    width: 50%;
 	    background: transparent;
 	}
+
+	.logo-manki {
+		top: -12px;
+	}
+
+	.btn-transparent,
+	.btn-transparent:hover,
+	.btn-transparent:active,
+	.btn-transparent:focus {
+		width: 45%;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -944,4 +978,26 @@ p {
 	.btn-radius:active {
 		width: 13%;
 	}
+
+	.embed-container iframe {
+		min-height: 115vh;
+	}
+}
+
+/* Validation */
+
+.has-error {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: red;
+    display: none;
+    font-size: 12px;
+    padding: 0px 5px;
+    position: absolute;
+    text-align: left;
+    top: 35px;
+}
+
+.has-error--uncheck {
+	top: 25px;
+    left: 20px;
 }

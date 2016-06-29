@@ -11,7 +11,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
-	<head>
+<head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -72,9 +72,7 @@
     src="https://www.facebook.com/tr?id=1348088305207969&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
-
-	</head>
-
+</head>
 	<body class="pageWrapper">
 		<section class="pane-container guias">
 			<div class="pane">
@@ -86,7 +84,6 @@
 								<div class="row menu-nav">
 									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 										<a href="home.html">
-											<!-- <object data="img/logo-de-manki.svg" type="image/svg+xml" class="logo-manki" alt="Logo de Manki"></object> -->
 											<img src="img/logo-de-manki.svg" alt="Logo de Manki" class="logo-manki">
 										</a>
 									</div>
@@ -171,25 +168,27 @@
 									<div class="row">
 										<h2 class="h1 main-title--footer">¡Sé un guia Manki! <a href="home.html"><img src="img/logo-de-manki-footer.svg" alt="Sé un guia Manki" class="image--width hidden-xs logo-manki-footer"></a></h2>
 									</div>
-									<p class="text-subscribe visible-lg">Danos una idea de qué experiencia te gustaría guiar. Una vez hayamos revisado el formulario, te estaremos respondiendo con el próximo paso a seguir para ingresar a la familia Manki.</p>
-									<div class="row row--margin hidden-xs">
+									<p class="text-subscribe">Danos una idea de qué experiencia te gustaría guiar. Una vez hayamos revisado el formulario, te estaremos respondiendo con el próximo paso a seguir para ingresar a la familia Manki.</p>
+									<div class="row row--margin">
 										<div class="col-sm-12 col-md-6 padding-left-none--md">
 											<p class="margin-b-0 text-left text-responsive">
 												Ponle un nombre a tu experiencia guiada
 											</p>
 										</div>
 										<div class="col-sm-12 col-md-6">
-											<textarea name="desc" rows="1" cols="4" maxlength="80" placeholder="Ej: Caminata costera por los malecones de la costa verde." class="form-control"></textarea>
+											<textarea id="expName" name="desc" rows="1" cols="4" maxlength="80" placeholder="Ej: Caminata costera por los malecones de la costa verde." class="form-control"></textarea>
+											<div id="emptyExpName" class="has-error">Campo no puede estar vacío</div>
 										</div>
 									</div>
-									<div class="row row--margin hidden-xs">
+									<div class="row row--margin">
 										<div class="col-sm-12 col-md-6 padding-left-none--md">
 											<p class="margin-b-0 text-left text-responsive">
 												Cuéntanos brevemente sobre cómo será tu experiencia guiada
 											</p>
 										</div>
 										<div class="col-sm-12 col-md-6">
-											<textarea name="desc" rows="2" cols="4" placeholder="Ej: La caminata costera es un paseo por los malecones más emblemáticos de la costa verde, tendremos vistas y paisajes únicos y disfrutaremos de unos de los mejores atardeceres de lima." class="form-control hidden-xs"></textarea>
+											<textarea id="expDesc" name="desc" rows="1" cols="4" placeholder="Ej: La caminata costera es un paseo por los malecones más emblemáticos de la costa verde, tendremos vistas y paisajes únicos y disfrutaremos de unos de los mejores atardeceres de lima." class="form-control"></textarea>
+											<div id="emptyExpDesc" class="has-error">Campo no puede estar vacío</div>
 										</div>
 									</div>
 									<div class="row row--margin">
@@ -199,10 +198,11 @@
 											</p>
 										</div>
 										<div class="col-sm-12 col-md-6 text-center">
-											<div class="input input--guias">
+											<div class="input input--guias padding-sm--none">
 												<div class="clearbox"></div>
 												<i class="icon user"></i>
-												<input type="text" name="motive" required placeholder="Me gusta hacer nuevos amigos, me interesa aprender de nuevas culturas..." class="form-control form-control--guias">
+												<input id="expMotive" type="text" name="motive" required placeholder="Me gusta hacer nuevos amigos, me interesa aprender de nuevas culturas..." class="form-control form-control--guias">
+												<div id="emptyExpMotive" class="has-error">Campo no puede estar vacío</div>
 											</div>
 										</div>
 									</div>
@@ -219,30 +219,38 @@
 											</p>
 										</div>
 										<div class="col-sm-12 col-md-6">
-											<div class="input input--guias">
+											<div class="input input--guias padding-sm--none">
 												<div class="clearbox"></div>
-												<i class="icon icon-guias icon-user"></i>
-												<input type="text" name="name" required placeholder="Stephen Hawking" class="form-control form-control--guias">
+												<i class="icon icon-guias icon-user icon--left"></i>
+												<input id="name" type="text" name="name" required placeholder="Stephen Hawking" class="form-control form-control--guias">
+												<div id="emptyName" class="has-error">Campo no puede estar vacío</div>
+												<div id="validateName" class="has-error">Solo se aceptan letras en este campo</div>
 											</div>
-											<div class="input input--block-end input--guias">
-												<i class="icon icon-guias icon-phone"></i>
-												<input type="text" name="phone" minlength="9" required placeholder="987 654 321" class="form-control form-control--guias">
+											<div class="input input--block-end input--guias padding-sm--none">
+												<i class="icon icon-guias icon-phone icon--left"></i>
+												<input id="phone" type="text" name="phone" minlength="7" required placeholder="987 654 321" class="form-control form-control--guias">
+												<div id="emptyPhone" class="has-error">Campo no puede estar vacío</div>
+												<div id="errorPhone" class="has-error">Número de teléfono no válido</div>
+												<div id="validatePhone" class="has-error">Solo se aceptan números en este campo</div>
 											</div>
-											<div class="input input--block-end input--guias">
-												<i class="icon icon-guias icon-email"></i>
-												<input type="email" name="mail" required placeholder="algo@ejemplo.com" class="form-control form-control--guias">
+											<div class="input input--block-end input--guias padding-sm--none">
+												<i class="icon icon-guias icon-email icon--left"></i>
+												<input id="email" type="email" name="mail" required placeholder="algo@ejemplo.com" class="form-control form-control--guias">
+												<div id="emptyEmail" class="has-error">Campo no puede estar vacío</div>
+												<div id="validateEmail" class="has-error">No es un correo válido. Ejm: hola@correo.com</div>
 											</div>
 										</div>
 										<div class="input--checkbox">
-			  								<input type="checkbox" name="terms-and-conditions" value="Acepto los términos y condiciones." class="col-xs-1 col-md" />
-			  								<span class="vertical-align padding-left hidden-xs">Acepto recibir información a través de correos de <h1 class="footer-h1">Manki</h1>.</span>
-			  								<span class="vertical-align padding-left text-xs-footer visible-xs col-xs-11">Acepto recibir información a través de correos de Manki.</span>
+			  								<input id="checkbox" type="checkbox" name="checkbox" value="Acepto los términos y condiciones." class="col-xs-1 col-md" />
+			  								<span class="inline-block vertical-align--top padding-left hidden-xs">Acepto recibir información a través de correos de <h1 class="footer-h1">Manki</h1>.</span>
+			  								<span class="inline-block vertical-align--top padding-left text-xs-footer visible-xs col-xs-11">Acepto recibir información a través de correos de Manki.</span>
+			  								<div id="uncheck" class="has-error has-error--uncheck">Debe seleccionar este campo para continuar</div>
 					                    </div>
 									</div>
 									<div class="row">
 										<div class="btn--hover width-button margin-auto">
 						                	<a class="text-oswald-regular">
-						                		<input type="submit" value="Inscribirme" class="btn-default btn-default--subscribe btn-default--traveler--variant" />
+						                		<input id="subscribe" type="submit" value="Inscribirme" class="btn-default btn-default--subscribe btn-default--traveler--variant" />
 						                	</a>
 						                </div>
 									</div>
@@ -263,33 +271,126 @@
 	<!-- Firebase -->
   	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBnSM4GxKgMgvn6EzMcqsHahu6BD683ujQ",
-      authDomain: "manki-platform.firebaseapp.com",
-      databaseURL: "https://manki-platform.firebaseio.com",
-      storageBucket: "manki-platform.appspot.com",
-    };
-    firebase.initializeApp(config);
+	    // Initialize Firebase
+	    var config = {
+	      apiKey: "AIzaSyBnSM4GxKgMgvn6EzMcqsHahu6BD683ujQ",
+	      authDomain: "manki-platform.firebaseapp.com",
+	      databaseURL: "https://manki-platform.firebaseio.com",
+	      storageBucket: "manki-platform.appspot.com",
+	    };
+	    firebase.initializeApp(config);
     </script>    
     <script>
-    $(function() {
-      $('a[href*="#OfreceUnaExperiencia"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
+	    $(function() {
+	      $('a[href*="#OfreceUnaExperiencia"]:not([href="#"])').click(function() {
+	        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	          var target = $(this.hash);
+	          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	          if (target.length) {
+	            $('html, body').animate({
+	              scrollTop: target.offset().top
+	            }, 1000);
+	            return false;
+	          }
+	        }
+	      });
+	    });
     </script>
 
     <script>
+		$(function() {
+			//Expresión para validar un correo electrónico
+        	var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+        	var letter = /^[a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ\s]+$/;
+        	var number = /^[0-9]+$/;
+
+        	$(document).ready(function() {
+        		$('#checkbox').click(function() {
+        			$('#checkbox').attr('checked');
+        		})
+        		
+			    $('#subscribe').click(function() {
+			    	var name = $('#name').val().trim();
+        			var email = $('#email').val().trim();
+        			var phone = $('#phone').val().trim();
+        			var expName = $('#expName').val().trim();
+        			var expDesc = $('#expDesc').val().trim();
+        			var expMotive = $('#expMotive').val().trim();
+
+				    if (name == '') {
+				        $("#emptyName").fadeIn('slow');
+				    } else {
+				        $("#emptyName").fadeOut();
+				    }
+
+				    if (expName == '') {
+				        $("#emptyExpName").fadeIn('slow');
+				    } else {
+				        $("#emptyExpName").fadeOut();
+				    }
+
+				    if (expDesc == '') {
+				        $("#emptyExpDesc").fadeIn('slow');
+				    } else {
+				        $("#emptyExpDesc").fadeOut();
+				    }
+
+				    if (expMotive == '') {
+				        $("#emptyExpMotive").fadeIn('slow');
+				    } else {
+				        $("#emptyExpMotive").fadeOut();
+				    }
+
+				    if (!letter.test(name) && name != '') {
+				        $("#validateName").fadeIn('slow');
+				    } else {
+				        $("#validateName").fadeOut();
+				    }
+
+				    if (email == '') {
+				    	$("#emptyEmail").fadeIn('slow');
+				    } else {
+				        $("#emptyEmail").fadeOut();
+				    }
+
+				    if (!expr.test(email) && email != '') {
+				    	$('#validateEmail').fadeIn('slow');
+				    } else {
+				    	$('#validateEmail').fadeOut();
+				    }
+
+				    if (phone == '') {
+				    	$("#emptyPhone").fadeIn('slow');
+				    } else {
+				        $("#emptyPhone").fadeOut();
+				    }
+
+				    if (phone.length < 7 && phone != '') {
+				    	$("#errorPhone").fadeIn('slow');
+				    } else {
+				        $("#errorPhone").fadeOut();
+				    }
+
+				    if (!number.test(phone) && phone != '') {
+				    	$('#validatePhone').fadeIn('slow');
+				    } else {
+				    	$('#validatePhone').fadeOut();
+				    }
+
+			        if($("#checkbox").is(':checked')) {  
+			        	$('#uncheck').fadeOut();
+				    } else {
+				    	$('#uncheck').fadeIn('slow');
+				    }
+				});
+			});
+		});
+	</script>
+
+    <script>
+    	function is_mobile() {
+	        return navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|Windows Phone|Tizen|Bada)/);
+	    }
     	$(function() {
     		$(document).scroll(function() {
 		    	if ($(window).scrollTop() > 2000) {
@@ -298,14 +399,35 @@
 		        } else {
 		          $('.menu-nav').css('display', 'block');
 		        }
+
+			    if (is_mobile()) {
+			    	if ($(window).height() > $(window).width() && $(window).scrollTop() > 4200) {
+			          console.log($(window).scrollTop());
+			          $('.menu-nav').css('display', 'none');
+			        } else {
+			          $('.menu-nav').css('display', 'block');
+			        }
+			    }
+
+			    if (is_mobile()) {
+			    	if ($(window).width() > $(window).height() && $(window).scrollTop() > 1493) {
+			          console.log($(window).scrollTop());
+			          $('.menu-nav').css('display', 'none');
+			        } else {
+			          $('.menu-nav').css('display', 'block');
+			        }
+			    }
 		    });
     	});
     </script>
 
 	<script>
+		function is_mobile() {
+	        return navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|Windows Phone|Tizen|Bada)/);
+	    }
 		(function($) {
 			$(document).ready(function() {
-			    if ($(window).width() > 992) {
+			    if ($(window).width() > 992 && !is_mobile()) {
 				    $(document).alton({
 				        fullSlideContainer: 'pane-container',
 				        singleSlideClass: 'pane',
@@ -332,7 +454,7 @@
 				        useSlideNumbers: true,
 				    });
 				}
-				if ($(window).width() > 991) {
+				if ($(window).width() > 991 && !is_mobile()) {
 				    $(document).alton({
 				        fullSlideContainer: 'pane-container',
 				        singleSlideClass: 'pane',

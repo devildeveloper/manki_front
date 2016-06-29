@@ -11,7 +11,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
-	<head>
+<head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -72,8 +72,7 @@
     src="https://www.facebook.com/tr?id=1348088305207969&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
-
-	</head>
+</head>
 
 	<body>
 		<div class="pageWrapper">
@@ -87,7 +86,6 @@
 									<div class="row menu-nav">
 										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 											<a href="home.html">
-												<!-- <object data="img/logo-de-manki.svg" type="image/svg+xml" class="logo-manki" alt="Logo de Manki"></object> -->
 												<img src="img/logo-de-manki.svg" alt="Logo de Manki" class="logo-manki">
 											</a>
 										</div>
@@ -179,22 +177,30 @@
 												<div class="input">
 													<div class="clearbox"></div>
 													<i class="icon icon-user"></i>
-													<input type="text" class="form-control" required aria-describedby="basic-addon1" name="name" placeholder="Nombre" />
+													<input id="name" type="text" class="form-control" required aria-describedby="basic-addon1" name="name" placeholder="Nombre" />
+													<div id="emptyName" class="has-error">Campo no puede estar vacío</div>
+													<div id="validateName" class="has-error">Solo se aceptan letras en este campo</div>
 												</div>
 											</div>
 											<div class="row">
 												<div class="input">
 													<i class="icon icon-email"></i>
-													<input type="email" class="form-control" required aria-describedby="basic-addon1" name="_replyto" placeholder="ejemplo@test.com" />
+													<input id="email" type="email" class="form-control" required aria-describedby="basic-addon1" name="_replyto" placeholder="ejemplo@test.com" />
+													<div id="emptyEmail" class="has-error">Campo no puede estar vacío</div>
+													<div id="validateEmail" class="has-error">No es un correo válido. Ejm: hola@correo.com</div>
 												</div>
 											</div>
-											<div class="input--checkbox display-table">
-												<input type="checkbox" name="terms-and-conditions" value="Acepto los términos y condiciones." />
-												<span class="vertical-align padding-left">Acepto recibir información a través de correos de <h1 class="footer-h1">Manki</h1>.</span>
+											<div class="row">
+												<div class="input--checkbox">
+					  								<input id="checkbox" type="checkbox" name="checkbox" required value="Acepto los términos y condiciones." class="col-xs-1 col-md" />
+					  								<span class="inline-block vertical-align--top padding-left hidden-xs">Acepto recibir información a través de correos de <h1 class="footer-h1">Manki</h1>.</span>
+					  								<span class="inline-block vertical-align--top padding-left text-xs-footer visible-xs col-xs-11">Acepto recibir información a través de correos de Manki.</span>
+					  								<div id="uncheck" class="has-error has-error--uncheck">Debe seleccionar este campo para continuar</div>
+							                    </div>
 											</div>
 											<div class="btn--hover width-lg margin-auto">
 												<a class="text-oswald-regular">
-													<input type="submit" value="Inscribirme" class="btn-default btn-default--subscribe btn-default--traveler" />
+													<input id="subscribe" type="submit" value="Inscribirme" class="btn-default btn-default--subscribe btn-default--traveler" />
 												</a>
 											</div>
 										</form>
@@ -216,33 +222,85 @@
 	<!-- Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBnSM4GxKgMgvn6EzMcqsHahu6BD683ujQ",
-      authDomain: "manki-platform.firebaseapp.com",
-      databaseURL: "https://manki-platform.firebaseio.com",
-      storageBucket: "manki-platform.appspot.com",
-    };
-    firebase.initializeApp(config);
+	    // Initialize Firebase
+	    var config = {
+	      apiKey: "AIzaSyBnSM4GxKgMgvn6EzMcqsHahu6BD683ujQ",
+	      authDomain: "manki-platform.firebaseapp.com",
+	      databaseURL: "https://manki-platform.firebaseio.com",
+	      storageBucket: "manki-platform.appspot.com",
+	    };
+	    firebase.initializeApp(config);
     </script>
     <script>
-    $(function() {
-      $('a[href*="#ViveUnaExperiencia"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
+	    $(function() {
+	      $('a[href*="#ViveUnaExperiencia"]:not([href="#"])').click(function() {
+	        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	          var target = $(this.hash);
+	          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	          if (target.length) {
+	            $('html, body').animate({
+	              scrollTop: target.offset().top
+	            }, 1000);
+	            return false;
+	          }
+	        }
+	      });
+	    });
     </script>
 
+	<script>
+		$(function() {
+			//Expresión para validar un correo electrónico
+        	var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+        	var letter = /^[a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ\s]+$/;
+
+        	$(document).ready(function() {
+        		$('#checkbox').click(function() {
+        			$('#checkbox').attr('checked');
+        		})
+        		
+			    $('#subscribe').click(function() {
+			    	var name = $('#name').val().trim();
+        			var email = $('#email').val().trim();
+
+				    if (name == '') {
+				        $("#emptyName").fadeIn('slow');
+				    } else {
+				        $("#emptyName").fadeOut();
+				    }
+
+				    if (!letter.test(name) && name != '') {
+				        $("#validateName").fadeIn('slow');
+				    } else {
+				        $("#validateName").fadeOut();
+				    }
+
+				    if (email == '') {
+				    	$("#emptyEmail").fadeIn('slow');
+				    } else {
+				        $("#emptyEmail").fadeOut();
+				    }
+
+				    if (!expr.test(email) && email != '') {
+				    	$('#validateEmail').fadeIn('slow');
+				    } else {
+				    	$('#validateEmail').fadeOut();
+				    }
+
+			        if($("#checkbox").is(':checked')) {  
+			        	$('#uncheck').fadeOut();
+				    } else {
+				    	$('#uncheck').fadeIn('slow');
+				    }
+				});
+			});
+		});
+	</script>
+
     <script>
+    	function is_mobile() {
+	        return navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|Windows Phone|Tizen|Bada)/);
+	    }
     	$(function() {
     		$(document).scroll(function() {
 		    	if ($(window).scrollTop() > 1938) {
@@ -251,14 +309,35 @@
 		        } else {
 		          $('.menu-nav').css('display', 'block');
 		        }
+
+			    if (is_mobile()) {
+			    	if ($(window).height() > $(window).width() && $(window).scrollTop() > 4200) {
+			          console.log($(window).scrollTop());
+			          $('.menu-nav').css('display', 'none');
+			        } else {
+			          $('.menu-nav').css('display', 'block');
+			        }
+			    }
+
+			    if (is_mobile()) {
+			    	if ($(window).width() > $(window).height() && $(window).scrollTop() > 1493) {
+			          console.log($(window).scrollTop());
+			          $('.menu-nav').css('display', 'none');
+			        } else {
+			          $('.menu-nav').css('display', 'block');
+			        }
+			    }
 		    });
     	});
     </script>
 
 	<script>
+		function is_mobile() {
+	        return navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|Windows Phone|Tizen|Bada)/);
+	    }
 		(function($) {
 			$(document).ready(function() {
-			    if ($(window).width() > 992) {
+			    if ($(window).width() > 992 && !is_mobile()) {
 				    $(document).alton({
 				        fullSlideContainer: 'pane-container',
 				        singleSlideClass: 'pane',
@@ -285,7 +364,7 @@
 				        useSlideNumbers: true,
 				    });
 				}
-				if ($(window).width() > 991) {
+				if ($(window).width() > 991 && !is_mobile()) {
 				    $(document).alton({
 				        fullSlideContainer: 'pane-container',
 				        singleSlideClass: 'pane',
