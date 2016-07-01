@@ -541,6 +541,10 @@ p {
 	padding: 8px 40px;
 }
 
+textarea {
+	height: 32px;
+}
+
 .input {
 	width: auto;
 	margin: 0 auto 30px !important;
