@@ -40,7 +40,7 @@
     <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-	<title>Manki</title>
+	<title>Manki | Vive Experiencias</title>
 
 	<!-- Bootstrap-->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -238,6 +238,8 @@
 	          var target = $(this.hash);
 	          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 	          if (target.length) {
+	          	$('.paginate:first-child').removeClass('active');
+      			$('.paginate:last-of-type').addClass('active');
 	            $('html, body').animate({
 	              scrollTop: target.offset().top
 	            }, 1000);
@@ -246,6 +248,15 @@
 	        }
 	      });
 	    });
+    </script>
+
+    <script>
+    	$(function() {
+    		$('.btn-default:not(.btn-default--subscribe)').click(function() {
+		      	$('.paginate:not(last-child)').css('background-color', 'rgba(0, 0, 0, 0.1)');
+		      	$('.paginate:last-child').css('background-color', '#ff5628');
+	      	});
+    	});
     </script>
 
 	<script>

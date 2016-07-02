@@ -308,6 +308,10 @@
         slideIndex(elementContainer[elementIndex], false);
       }
 
+      $('.btn-default:not(.btn-default--subscribe)').click(function() {
+        return clickToNavigate(3);
+      });
+
       /* ============================================================================
        * Update Position
        * -------------------
@@ -397,6 +401,11 @@
               slideNumbersFade(true);
             }
           }
+
+          $('.btn-default:not(.btn-default--subscribe)').click(function() {
+            slideIndex(previous, true);
+            slideIndex(current, false);
+          });
 
           // Update top variable
           top = false;
